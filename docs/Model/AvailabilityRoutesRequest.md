@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **string** | Category | 
 **language** | **string** | Language | 
-**occupancy** | [**\Swagger\Client\Model\Occupancy**](Occupancy.md) |  | 
-**routes** | [**\Swagger\Client\Model\RouteRequestDTO[]**](RouteRequestDTO.md) | Routes | 
+**occupancy** | [**\EmanuelBuss\ApitudeTransfer\Model\Occupancy**](Occupancy.md) |  | 
+**routes** | [**\EmanuelBuss\ApitudeTransfer\Model\RouteRequestDTO[]**](RouteRequestDTO.md) | Routes | 
 **type** | **string** | Type | 
 **vehicle** | **string** | Vehicle | 
 

@@ -1,4 +1,4 @@
-# Swagger\Client\AvailabilityApi
+# EmanuelBuss\ApitudeTransfer\AvailabilityApi
 
 All URIs are relative to *https://api.test.hotelbeds.com/transfor-api/1.0*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**availability2**](AvailabilityApi.md#availability2) | **POST** /availability/routes/{language}/{adults}/{children}/{infants} | Availability routes
 
 # **availability**
-> \Swagger\Client\Model\AvailabilityResponse availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+> \EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
 
 Availability without comeBack parameter
 
@@ -20,11 +20,11 @@ Returns a Response with the RQ, a list of comeBack services and a list of depart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **availability1**
-> \Swagger\Client\Model\AvailabilityResponse availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+> \EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
 
 Availability with comeBack parameter
 
@@ -90,11 +90,11 @@ Returns a Response with the RQ, a list of comeBack services and a list of depart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **availability2**
-> \Swagger\Client\Model\AvailabilityResponse availability2($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results)
+> \EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse availability2($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results)
 
 Availability routes
 
@@ -162,17 +162,17 @@ Returns a Response with the RQ, a list of routes with available transfer service
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\RouteRequest()); // \Swagger\Client\Model\RouteRequest[] | routeRequests
+$body = array(new \EmanuelBuss\ApitudeTransfer\Model\RouteRequest()); // \EmanuelBuss\ApitudeTransfer\Model\RouteRequest[] | routeRequests
 $language = "language_example"; // string | language iso code of response
 $adults = 56; // int | number of adults
 $children = 56; // int | number of children
@@ -195,7 +195,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\RouteRequest[]**](../Model/RouteRequest.md)| routeRequests |
+ **body** | [**\EmanuelBuss\ApitudeTransfer\Model\RouteRequest[]**](../Model/RouteRequest.md)| routeRequests |
  **language** | **string**| language iso code of response |
  **adults** | **int**| number of adults |
  **children** | **int**| number of children |
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\AvailabilityResponse**](../Model/AvailabilityResponse.md)
 
 ### Authorization
 

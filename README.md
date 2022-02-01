@@ -58,11 +58,11 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -86,11 +86,11 @@ try {
 }
 
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,17 +115,17 @@ try {
 }
 
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\AvailabilityApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\AvailabilityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\RouteRequest()); // \Swagger\Client\Model\RouteRequest[] | routeRequests
+$body = array(new \EmanuelBuss\ApitudeTransfer\Model\RouteRequest()); // \EmanuelBuss\ApitudeTransfer\Model\RouteRequest[] | routeRequests
 $language = "language_example"; // string | language iso code of response
 $adults = 56; // int | number of adults
 $children = 56; // int | number of children

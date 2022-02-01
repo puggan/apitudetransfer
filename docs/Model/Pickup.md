@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **string** | Address | [optional] 
 **altitude** | **double** | Altitude | [optional] 
-**check_pickup** | [**\Swagger\Client\Model\CheckPickup**](CheckPickup.md) |  | [optional] 
+**check_pickup** | [**\EmanuelBuss\ApitudeTransfer\Model\CheckPickup**](CheckPickup.md) |  | [optional] 
 **description** | **string** | Pickup description | [optional] 
 **image** | **string** | Image | [optional] 
 **latitude** | **double** | Latitude | [optional] 

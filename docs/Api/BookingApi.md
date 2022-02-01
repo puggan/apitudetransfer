@@ -1,4 +1,4 @@
-# Swagger\Client\BookingApi
+# EmanuelBuss\ApitudeTransfer\BookingApi
 
 All URIs are relative to *https://api.test.hotelbeds.com/transfor-api/1.0*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**booking8**](BookingApi.md#booking8) | **DELETE** /bookings/{language}/reference/{reference}/id/{id} | Modify transfers bookings
 
 # **booking**
-> \Swagger\Client\Model\BookingResponse booking($language, $reference, $simulation)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking($language, $reference, $simulation)
 
 Cancel transfers bookings
 
@@ -26,11 +26,11 @@ The cancel endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking1**
-> \Swagger\Client\Model\BookingResponse booking1($language, $reference, $simulation)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking1($language, $reference, $simulation)
 
 Cancel transfers bookings
 
@@ -84,11 +84,11 @@ The cancel endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking2**
-> \Swagger\Client\Model\BookingResponse booking2($body, $x_platform_id)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking2($body, $x_platform_id)
 
 Confirm transfers bookings
 
@@ -142,17 +142,17 @@ The confirm endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ConfirmRequest(); // \Swagger\Client\Model\ConfirmRequest | confirmRequestDTO
+$body = new \EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest(); // \EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest | confirmRequestDTO
 $x_platform_id = "x_platform_id_example"; // string | X-Platform-ID
 
 try {
@@ -168,12 +168,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ConfirmRequest**](../Model/ConfirmRequest.md)| confirmRequestDTO |
+ **body** | [**\EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest**](../Model/ConfirmRequest.md)| confirmRequestDTO |
  **x_platform_id** | **string**| X-Platform-ID | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking3**
-> \Swagger\Client\Model\BookingResponse booking3($body, $x_platform_id)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking3($body, $x_platform_id)
 
 Confirm transfers bookings
 
@@ -198,17 +198,17 @@ The confirm endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ConfirmRequest(); // \Swagger\Client\Model\ConfirmRequest | confirmRequestDTO
+$body = new \EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest(); // \EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest | confirmRequestDTO
 $x_platform_id = "x_platform_id_example"; // string | X-Platform-ID
 
 try {
@@ -224,12 +224,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ConfirmRequest**](../Model/ConfirmRequest.md)| confirmRequestDTO |
+ **body** | [**\EmanuelBuss\ApitudeTransfer\Model\ConfirmRequest**](../Model/ConfirmRequest.md)| confirmRequestDTO |
  **x_platform_id** | **string**| X-Platform-ID | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking4**
-> \Swagger\Client\Model\BookingResponse booking4($language, $reference)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking4($language, $reference)
 
 Get a bookings confirmed
 
@@ -254,11 +254,11 @@ The booking endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking5**
-> \Swagger\Client\Model\BookingResponse booking5($language, $reference)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking5($language, $reference)
 
 Get a bookings confirmed
 
@@ -310,11 +310,11 @@ The booking endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking6**
-> \Swagger\Client\Model\BookingListResponse booking6($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingListResponse booking6($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname)
 
 Get a booking list
 
@@ -366,11 +366,11 @@ The booking endpoint returns a BookingListResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingListResponse**](../Model/BookingListResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingListResponse**](../Model/BookingListResponse.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking7**
-> \Swagger\Client\Model\BookingResponse booking7($language, $reference, $id, $simulation)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking7($language, $reference, $id, $simulation)
 
 Modify transfers bookings
 
@@ -434,11 +434,11 @@ The modification endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **booking8**
-> \Swagger\Client\Model\BookingResponse booking8($language, $reference, $id, $simulation)
+> \EmanuelBuss\ApitudeTransfer\Model\BookingResponse booking8($language, $reference, $id, $simulation)
 
 Modify transfers bookings
 
@@ -494,11 +494,11 @@ The modification endpoint returns a BookingResponseDTO object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: Api-key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
+$config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKey('Api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
+// $config = EmanuelBuss\ApitudeTransfer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Api-key', 'Bearer');
 
-$apiInstance = new Swagger\Client\APITudeTransfer\BookingApi(
+$apiInstance = new EmanuelBuss\ApitudeTransfer\APITudeTransfer\BookingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BookingResponse**](../Model/BookingResponse.md)
+[**\EmanuelBuss\ApitudeTransfer\Model\BookingResponse**](../Model/BookingResponse.md)
 
 ### Authorization
 
