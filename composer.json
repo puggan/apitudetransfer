@@ -1,5 +1,5 @@
 {
-    "name": "Emanuelbuss/apitudetransfer",
+    "name": "emanuelbuss/apitudetransfer",
     "description": "",
     "keywords": [
         "swagger",
@@ -16,16 +16,17 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=8",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "*"
+        "guzzlehttp/guzzle": "*",
+        "guzzlehttp/psr7": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
         "squizlabs/php_codesniffer": "~2.6",
-        "friendsofphp/php-cs-fixer": "~1.12"
+        "friendsofphp/php-cs-fixer": ">=1.12"
     },
     "autoload": {
         "psr-4": { "Swagger\\Client\\" : "lib/" }
