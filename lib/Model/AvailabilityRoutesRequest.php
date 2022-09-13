@@ -82,7 +82,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -92,7 +92,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -143,7 +143,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -153,7 +153,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -163,7 +163,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -173,7 +173,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -208,7 +208,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -239,7 +239,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -250,7 +250,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getCategory()
+    public function getCategory(): string
     {
         return $this->container['category'];
     }
@@ -262,7 +262,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCategory($category)
+    public function setCategory($category): static
     {
         $this->container['category'] = $category;
 
@@ -274,7 +274,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage(): string
     {
         return $this->container['language'];
     }
@@ -286,7 +286,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLanguage($language)
+    public function setLanguage($language): static
     {
         $this->container['language'] = $language;
 
@@ -298,7 +298,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Occupancy
      */
-    public function getOccupancy()
+    public function getOccupancy(): Occupancy
     {
         return $this->container['occupancy'];
     }
@@ -310,7 +310,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setOccupancy($occupancy)
+    public function setOccupancy($occupancy): static
     {
         $this->container['occupancy'] = $occupancy;
 
@@ -322,7 +322,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\RouteRequestDTO[]
      */
-    public function getRoutes()
+    public function getRoutes(): array
     {
         return $this->container['routes'];
     }
@@ -334,7 +334,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setRoutes($routes)
+    public function setRoutes($routes): static
     {
         $this->container['routes'] = $routes;
 
@@ -346,7 +346,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->container['type'];
     }
@@ -358,7 +358,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setType($type)
+    public function setType($type): static
     {
         $this->container['type'] = $type;
 
@@ -370,7 +370,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getVehicle()
+    public function getVehicle(): string
     {
         return $this->container['vehicle'];
     }
@@ -382,7 +382,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setVehicle($vehicle)
+    public function setVehicle($vehicle): static
     {
         $this->container['vehicle'] = $vehicle;
 
@@ -395,7 +395,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -407,7 +407,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -420,7 +420,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -436,7 +436,7 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

@@ -80,7 +80,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -90,7 +90,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -138,7 +138,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -148,7 +148,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -158,7 +158,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -168,7 +168,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -202,7 +202,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -218,7 +218,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -229,7 +229,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Detail
      */
-    public function getDetail()
+    public function getDetail(): Detail
     {
         return $this->container['detail'];
     }
@@ -241,7 +241,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDetail($detail)
+    public function setDetail($detail): static
     {
         $this->container['detail'] = $detail;
 
@@ -253,7 +253,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\DropoffInformation
      */
-    public function getDropoffInformation()
+    public function getDropoffInformation(): DropoffInformation
     {
         return $this->container['dropoff_information'];
     }
@@ -265,7 +265,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDropoffInformation($dropoff_information)
+    public function setDropoffInformation($dropoff_information): static
     {
         $this->container['dropoff_information'] = $dropoff_information;
 
@@ -277,7 +277,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\ConfirmPickupInformation
      */
-    public function getPickupInformation()
+    public function getPickupInformation(): ConfirmPickupInformation
     {
         return $this->container['pickup_information'];
     }
@@ -289,7 +289,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPickupInformation($pickup_information)
+    public function setPickupInformation($pickup_information): static
     {
         $this->container['pickup_information'] = $pickup_information;
 
@@ -301,7 +301,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getRateKey()
+    public function getRateKey(): string
     {
         return $this->container['rate_key'];
     }
@@ -313,7 +313,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setRateKey($rate_key)
+    public function setRateKey($rate_key): static
     {
         $this->container['rate_key'] = $rate_key;
 
@@ -325,7 +325,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferDetail[]
      */
-    public function getTransferDetails()
+    public function getTransferDetails(): array
     {
         return $this->container['transfer_details'];
     }
@@ -337,7 +337,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTransferDetails($transfer_details)
+    public function setTransferDetails($transfer_details): static
     {
         $this->container['transfer_details'] = $transfer_details;
 
@@ -350,7 +350,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -362,7 +362,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -375,7 +375,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -391,7 +391,7 @@ class TransferConfirm implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

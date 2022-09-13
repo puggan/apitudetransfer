@@ -46,7 +46,7 @@ class ObjectSerializer
      *
      * @return string|object serialized form of $data
      */
-    public static function sanitizeForSerialization($data, $format = null)
+    public static function sanitizeForSerialization($data, $format = null): float|object|bool|int|string|null
     {
         if (is_scalar($data) || null === $data) {
             return $data;
@@ -88,7 +88,7 @@ class ObjectSerializer
      *
      * @return string the sanitized filename
      */
-    public static function sanitizeFilename($filename)
+    public static function sanitizeFilename($filename): string
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
@@ -105,7 +105,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toPathValue($value)
+    public static function toPathValue($value): string
     {
         return rawurlencode(self::toString($value));
     }
@@ -121,7 +121,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toQueryValue($object, $format = null)
+    public static function toQueryValue($object, $format = null): \DateTime|string
     {
         if (is_array($object)) {
             return implode(',', $object);
@@ -139,7 +139,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toHeaderValue($value)
+    public static function toHeaderValue($value): \DateTime|string
     {
         return self::toString($value);
     }
@@ -153,7 +153,7 @@ class ObjectSerializer
      *
      * @return string the form string
      */
-    public static function toFormValue($value)
+    public static function toFormValue($value): \DateTime|string
     {
         if ($value instanceof \SplFileObject) {
             return $value->getRealPath();
@@ -173,7 +173,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toString($value, $format = null)
+    public static function toString($value, $format = null): \DateTime|string
     {
         if ($value instanceof \DateTime) {
             return ($format === 'date') ? $value->format('Y-m-d') : $value->format(\DateTime::ATOM);
@@ -192,7 +192,7 @@ class ObjectSerializer
      *
      * @return string
      */
-    public static function serializeCollection(array $collection, $collectionFormat, $allowCollectionFormatMulti = false)
+    public static function serializeCollection(array $collection, $collectionFormat, $allowCollectionFormatMulti = false): string
     {
         if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
             // http_build_query() almost does the job for us. We just
@@ -226,7 +226,7 @@ class ObjectSerializer
      *
      * @return object|array|null an single or an array of $class instances
      */
-    public static function deserialize($data, $class, $httpHeaders = null)
+    public static function deserialize($data, $class, $httpHeaders = null): object|\DateTime|array|\SplFileObject|null
     {
         if (null === $data) {
             return null;

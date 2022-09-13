@@ -76,7 +76,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -86,7 +86,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -128,7 +128,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -138,7 +138,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -148,7 +148,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -158,7 +158,7 @@ class TransferRemarks implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -171,7 +171,7 @@ const TYPE_AGENCY = 'AGENCY';
      *
      * @return string[]
      */
-    public function getTypeAllowableValues()
+    public function getTypeAllowableValues(): array
     {
         return [
             self::TYPE_CONTRACT,
@@ -203,7 +203,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -224,7 +224,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -235,7 +235,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->container['description'];
     }
@@ -247,7 +247,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setDescription($description): static
     {
         $this->container['description'] = $description;
 
@@ -259,7 +259,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return bool
      */
-    public function getMandatory()
+    public function getMandatory(): bool
     {
         return $this->container['mandatory'];
     }
@@ -271,7 +271,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return $this
      */
-    public function setMandatory($mandatory)
+    public function setMandatory($mandatory): static
     {
         $this->container['mandatory'] = $mandatory;
 
@@ -283,7 +283,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->container['type'];
     }
@@ -295,7 +295,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return $this
      */
-    public function setType($type)
+    public function setType($type): static
     {
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($type) && !in_array($type, $allowedValues, true)) {
@@ -317,7 +317,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -329,7 +329,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -342,7 +342,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -358,7 +358,7 @@ self::TYPE_AGENCY,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

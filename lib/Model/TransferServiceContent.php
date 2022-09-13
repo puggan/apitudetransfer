@@ -84,7 +84,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -94,7 +94,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -148,7 +148,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -158,7 +158,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -168,7 +168,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -178,7 +178,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -214,7 +214,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -245,7 +245,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -256,7 +256,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Category
      */
-    public function getCategory()
+    public function getCategory(): Category
     {
         return $this->container['category'];
     }
@@ -268,7 +268,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCategory($category)
+    public function setCategory($category): static
     {
         $this->container['category'] = $category;
 
@@ -280,7 +280,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferTimeInfo[]
      */
-    public function getCustomerTransferTimeInfo()
+    public function getCustomerTransferTimeInfo(): array
     {
         return $this->container['customer_transfer_time_info'];
     }
@@ -292,7 +292,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCustomerTransferTimeInfo($customer_transfer_time_info)
+    public function setCustomerTransferTimeInfo($customer_transfer_time_info): static
     {
         $this->container['customer_transfer_time_info'] = $customer_transfer_time_info;
 
@@ -304,7 +304,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Image[]
      */
-    public function getImages()
+    public function getImages(): array
     {
         return $this->container['images'];
     }
@@ -316,7 +316,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setImages($images)
+    public function setImages($images): static
     {
         $this->container['images'] = $images;
 
@@ -328,7 +328,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferTimeInfo[]
      */
-    public function getSupplierTransferTimeInfo()
+    public function getSupplierTransferTimeInfo(): array
     {
         return $this->container['supplier_transfer_time_info'];
     }
@@ -340,7 +340,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setSupplierTransferTimeInfo($supplier_transfer_time_info)
+    public function setSupplierTransferTimeInfo($supplier_transfer_time_info): static
     {
         $this->container['supplier_transfer_time_info'] = $supplier_transfer_time_info;
 
@@ -352,7 +352,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferDetailInfo[]
      */
-    public function getTransferDetailInfo()
+    public function getTransferDetailInfo(): array
     {
         return $this->container['transfer_detail_info'];
     }
@@ -364,7 +364,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTransferDetailInfo($transfer_detail_info)
+    public function setTransferDetailInfo($transfer_detail_info): static
     {
         $this->container['transfer_detail_info'] = $transfer_detail_info;
 
@@ -376,7 +376,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferRemarks[]
      */
-    public function getTransferRemarks()
+    public function getTransferRemarks(): array
     {
         return $this->container['transfer_remarks'];
     }
@@ -388,7 +388,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTransferRemarks($transfer_remarks)
+    public function setTransferRemarks($transfer_remarks): static
     {
         $this->container['transfer_remarks'] = $transfer_remarks;
 
@@ -400,7 +400,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Vehicle
      */
-    public function getVehicle()
+    public function getVehicle(): Vehicle
     {
         return $this->container['vehicle'];
     }
@@ -412,7 +412,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setVehicle($vehicle)
+    public function setVehicle($vehicle): static
     {
         $this->container['vehicle'] = $vehicle;
 
@@ -425,7 +425,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -437,7 +437,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -450,7 +450,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -466,7 +466,7 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

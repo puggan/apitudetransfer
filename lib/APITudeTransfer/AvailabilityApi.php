@@ -81,7 +81,7 @@ class AvailabilityApi
     /**
      * @return Configuration
      */
-    public function getConfig()
+    public function getConfig(): Configuration
     {
         return $this->config;
     }
@@ -105,9 +105,9 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+    public function availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): \Swagger\Client\Model\AvailabilityResponse
     {
-        list($response) = $this->availabilityWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants);
+        [$response] = $this->availabilityWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants);
         return $response;
     }
 
@@ -130,7 +130,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AvailabilityResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function availabilityWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+    public function availabilityWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): array
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availabilityRequest($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants);
@@ -236,7 +236,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availabilityAsync($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+    public function availabilityAsync($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): \GuzzleHttp\Promise\PromiseInterface
     {
         return $this->availabilityAsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
             ->then(
@@ -264,7 +264,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availabilityAsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+    public function availabilityAsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): \GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availabilityRequest($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants);
@@ -322,7 +322,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function availabilityRequest($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants)
+    protected function availabilityRequest($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -549,9 +549,9 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+    public function availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): \Swagger\Client\Model\AvailabilityResponse
     {
-        list($response) = $this->availability1WithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants);
+        [$response] = $this->availability1WithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants);
         return $response;
     }
 
@@ -575,7 +575,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AvailabilityResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function availability1WithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+    public function availability1WithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): array
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availability1Request($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants);
@@ -682,7 +682,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availability1Async($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+    public function availability1Async($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): \GuzzleHttp\Promise\PromiseInterface
     {
         return $this->availability1AsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
             ->then(
@@ -711,7 +711,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availability1AsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+    public function availability1AsyncWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): \GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availability1Request($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants);
@@ -770,7 +770,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function availability1Request($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants)
+    protected function availability1Request($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -1010,9 +1010,9 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability2($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true')
+    public function availability2($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): \Swagger\Client\Model\AvailabilityResponse
     {
-        list($response) = $this->availability2WithHttpInfo($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results);
+        [$response] = $this->availability2WithHttpInfo($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results);
         return $response;
     }
 
@@ -1035,7 +1035,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\AvailabilityResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function availability2WithHttpInfo($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true')
+    public function availability2WithHttpInfo($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): array
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availability2Request($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results);
@@ -1141,7 +1141,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availability2Async($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true')
+    public function availability2Async($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): \GuzzleHttp\Promise\PromiseInterface
     {
         return $this->availability2AsyncWithHttpInfo($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results)
             ->then(
@@ -1169,7 +1169,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function availability2AsyncWithHttpInfo($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true')
+    public function availability2AsyncWithHttpInfo($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): \GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\AvailabilityResponse';
         $request = $this->availability2Request($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results);
@@ -1227,7 +1227,7 @@ class AvailabilityApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function availability2Request($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true')
+    protected function availability2Request($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): Request
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -1395,7 +1395,7 @@ class AvailabilityApi
      * @throws \RuntimeException on file opening failure
      * @return array of http client options
      */
-    protected function createHttpClientOption()
+    protected function createHttpClientOption(): array
     {
         $options = [];
         if ($this->config->getDebug()) {

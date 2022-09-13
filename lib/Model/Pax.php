@@ -80,7 +80,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -90,7 +90,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -138,7 +138,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -148,7 +148,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -158,7 +158,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -168,7 +168,7 @@ class Pax implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -182,7 +182,7 @@ const TYPE_INFANT = 'INFANT';
      *
      * @return string[]
      */
-    public function getTypeAllowableValues()
+    public function getTypeAllowableValues(): array
     {
         return [
             self::TYPE_ADULT,
@@ -217,7 +217,7 @@ self::TYPE_INFANT,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -250,7 +250,7 @@ self::TYPE_INFANT,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -261,7 +261,7 @@ self::TYPE_INFANT,        ];
      *
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->container['email'];
     }
@@ -273,7 +273,7 @@ self::TYPE_INFANT,        ];
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setEmail($email): static
     {
         $this->container['email'] = $email;
 
@@ -285,7 +285,7 @@ self::TYPE_INFANT,        ];
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->container['name'];
     }
@@ -297,7 +297,7 @@ self::TYPE_INFANT,        ];
      *
      * @return $this
      */
-    public function setName($name)
+    public function setName($name): static
     {
         $this->container['name'] = $name;
 
@@ -309,7 +309,7 @@ self::TYPE_INFANT,        ];
      *
      * @return string
      */
-    public function getPhone()
+    public function getPhone(): string
     {
         return $this->container['phone'];
     }
@@ -321,7 +321,7 @@ self::TYPE_INFANT,        ];
      *
      * @return $this
      */
-    public function setPhone($phone)
+    public function setPhone($phone): static
     {
         $this->container['phone'] = $phone;
 
@@ -333,7 +333,7 @@ self::TYPE_INFANT,        ];
      *
      * @return string
      */
-    public function getSurname()
+    public function getSurname(): string
     {
         return $this->container['surname'];
     }
@@ -345,7 +345,7 @@ self::TYPE_INFANT,        ];
      *
      * @return $this
      */
-    public function setSurname($surname)
+    public function setSurname($surname): static
     {
         $this->container['surname'] = $surname;
 
@@ -357,7 +357,7 @@ self::TYPE_INFANT,        ];
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->container['type'];
     }
@@ -369,7 +369,7 @@ self::TYPE_INFANT,        ];
      *
      * @return $this
      */
-    public function setType($type)
+    public function setType($type): static
     {
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($type) && !in_array($type, $allowedValues, true)) {
@@ -391,7 +391,7 @@ self::TYPE_INFANT,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -403,7 +403,7 @@ self::TYPE_INFANT,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -416,7 +416,7 @@ self::TYPE_INFANT,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -432,7 +432,7 @@ self::TYPE_INFANT,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

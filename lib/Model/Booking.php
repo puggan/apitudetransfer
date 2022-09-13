@@ -102,7 +102,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -112,7 +112,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -193,7 +193,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -203,7 +203,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -213,7 +213,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -223,7 +223,7 @@ class Booking implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -237,7 +237,7 @@ const STATUS_MODIFIED = 'MODIFIED';
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getStatusAllowableValues(): array
     {
         return [
             self::STATUS_CONFIRMED,
@@ -283,7 +283,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -340,7 +340,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -351,7 +351,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getBookingFileId()
+    public function getBookingFileId(): string
     {
         return $this->container['booking_file_id'];
     }
@@ -363,7 +363,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setBookingFileId($booking_file_id)
+    public function setBookingFileId($booking_file_id): static
     {
         $this->container['booking_file_id'] = $booking_file_id;
 
@@ -375,7 +375,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getClientReference()
+    public function getClientReference(): string
     {
         return $this->container['client_reference'];
     }
@@ -387,7 +387,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setClientReference($client_reference)
+    public function setClientReference($client_reference): static
     {
         $this->container['client_reference'] = $client_reference;
 
@@ -399,7 +399,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getCreationDate()
+    public function getCreationDate(): string
     {
         return $this->container['creation_date'];
     }
@@ -411,7 +411,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setCreationDate($creation_date)
+    public function setCreationDate($creation_date): static
     {
         $this->container['creation_date'] = $creation_date;
 
@@ -423,7 +423,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->container['currency'];
     }
@@ -435,7 +435,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setCurrency($currency)
+    public function setCurrency($currency): static
     {
         $this->container['currency'] = $currency;
 
@@ -447,7 +447,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\Pax
      */
-    public function getHolder()
+    public function getHolder(): Pax
     {
         return $this->container['holder'];
     }
@@ -459,7 +459,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setHolder($holder)
+    public function setHolder($holder): static
     {
         $this->container['holder'] = $holder;
 
@@ -471,7 +471,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\InvoiceCompany
      */
-    public function getInvoiceCompany()
+    public function getInvoiceCompany(): InvoiceCompany
     {
         return $this->container['invoice_company'];
     }
@@ -483,7 +483,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setInvoiceCompany($invoice_company)
+    public function setInvoiceCompany($invoice_company): static
     {
         $this->container['invoice_company'] = $invoice_company;
 
@@ -495,7 +495,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\Link[]
      */
-    public function getLinks()
+    public function getLinks(): array
     {
         return $this->container['links'];
     }
@@ -507,7 +507,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setLinks($links)
+    public function setLinks($links): static
     {
         $this->container['links'] = $links;
 
@@ -519,7 +519,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\ModificationsPolicies
      */
-    public function getModificationsPolicies()
+    public function getModificationsPolicies(): ModificationsPolicies
     {
         return $this->container['modifications_policies'];
     }
@@ -531,7 +531,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setModificationsPolicies($modifications_policies)
+    public function setModificationsPolicies($modifications_policies): static
     {
         $this->container['modifications_policies'] = $modifications_policies;
 
@@ -543,7 +543,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return float
      */
-    public function getPendingAmount()
+    public function getPendingAmount(): float
     {
         return $this->container['pending_amount'];
     }
@@ -555,7 +555,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setPendingAmount($pending_amount)
+    public function setPendingAmount($pending_amount): static
     {
         $this->container['pending_amount'] = $pending_amount;
 
@@ -567,7 +567,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getReference()
+    public function getReference(): string
     {
         return $this->container['reference'];
     }
@@ -579,7 +579,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setReference($reference)
+    public function setReference($reference): static
     {
         $this->container['reference'] = $reference;
 
@@ -591,7 +591,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getRemark()
+    public function getRemark(): string
     {
         return $this->container['remark'];
     }
@@ -603,7 +603,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setRemark($remark)
+    public function setRemark($remark): static
     {
         $this->container['remark'] = $remark;
 
@@ -615,7 +615,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string
      */
-    public function getStatus()
+    public function getStatus(): string
     {
         return $this->container['status'];
     }
@@ -627,7 +627,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setStatus($status): static
     {
         $allowedValues = $this->getStatusAllowableValues();
         if (!in_array($status, $allowedValues, true)) {
@@ -648,7 +648,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\InvoiceCompany
      */
-    public function getSupplier()
+    public function getSupplier(): InvoiceCompany
     {
         return $this->container['supplier'];
     }
@@ -660,7 +660,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setSupplier($supplier)
+    public function setSupplier($supplier): static
     {
         $this->container['supplier'] = $supplier;
 
@@ -672,7 +672,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return float
      */
-    public function getTotalAmount()
+    public function getTotalAmount(): float
     {
         return $this->container['total_amount'];
     }
@@ -684,7 +684,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setTotalAmount($total_amount)
+    public function setTotalAmount($total_amount): static
     {
         $this->container['total_amount'] = $total_amount;
 
@@ -696,7 +696,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return float
      */
-    public function getTotalNetAmount()
+    public function getTotalNetAmount(): float
     {
         return $this->container['total_net_amount'];
     }
@@ -708,7 +708,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setTotalNetAmount($total_net_amount)
+    public function setTotalNetAmount($total_net_amount): static
     {
         $this->container['total_net_amount'] = $total_net_amount;
 
@@ -720,7 +720,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return \Swagger\Client\Model\TransferServiceBookingCancel[]
      */
-    public function getTransfers()
+    public function getTransfers(): array
     {
         return $this->container['transfers'];
     }
@@ -732,7 +732,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return $this
      */
-    public function setTransfers($transfers)
+    public function setTransfers($transfers): static
     {
         $this->container['transfers'] = $transfers;
 
@@ -745,7 +745,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -757,7 +757,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -770,7 +770,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -786,7 +786,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

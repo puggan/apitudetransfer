@@ -82,7 +82,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -92,7 +92,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -143,7 +143,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -153,7 +153,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -163,7 +163,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -173,7 +173,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -208,7 +208,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -239,7 +239,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -250,7 +250,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferDateTime
      */
-    public function getComeBack()
+    public function getComeBack(): TransferDateTime
     {
         return $this->container['come_back'];
     }
@@ -262,7 +262,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setComeBack($come_back)
+    public function setComeBack($come_back): static
     {
         $this->container['come_back'] = $come_back;
 
@@ -274,7 +274,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferDateTime
      */
-    public function getDeparture()
+    public function getDeparture(): TransferDateTime
     {
         return $this->container['departure'];
     }
@@ -286,7 +286,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDeparture($departure)
+    public function setDeparture($departure): static
     {
         $this->container['departure'] = $departure;
 
@@ -298,7 +298,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferPoint
      */
-    public function getFrom()
+    public function getFrom(): TransferPoint
     {
         return $this->container['from'];
     }
@@ -310,7 +310,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setFrom($from)
+    public function setFrom($from): static
     {
         $this->container['from'] = $from;
 
@@ -322,7 +322,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage(): string
     {
         return $this->container['language'];
     }
@@ -334,7 +334,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLanguage($language)
+    public function setLanguage($language): static
     {
         $this->container['language'] = $language;
 
@@ -346,7 +346,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Occupancy
      */
-    public function getOccupancy()
+    public function getOccupancy(): Occupancy
     {
         return $this->container['occupancy'];
     }
@@ -358,7 +358,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setOccupancy($occupancy)
+    public function setOccupancy($occupancy): static
     {
         $this->container['occupancy'] = $occupancy;
 
@@ -370,7 +370,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferPoint
      */
-    public function getTo()
+    public function getTo(): TransferPoint
     {
         return $this->container['to'];
     }
@@ -382,7 +382,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTo($to)
+    public function setTo($to): static
     {
         $this->container['to'] = $to;
 
@@ -395,7 +395,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -407,7 +407,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -420,7 +420,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -436,7 +436,7 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

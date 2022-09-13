@@ -76,7 +76,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -86,7 +86,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -128,7 +128,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -138,7 +138,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -148,7 +148,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -158,7 +158,7 @@ class TransferTimeInfo implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -172,7 +172,7 @@ const TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL = 'SUPPLIER_MAX_WAITING_TIME_
      *
      * @return string[]
      */
-    public function getTypeAllowableValues()
+    public function getTypeAllowableValues(): array
     {
         return [
             self::TYPE_CUSTOMER_MAX_WAITING_TIME,
@@ -205,7 +205,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -235,7 +235,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -246,7 +246,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return string
      */
-    public function getMetric()
+    public function getMetric(): string
     {
         return $this->container['metric'];
     }
@@ -258,7 +258,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return $this
      */
-    public function setMetric($metric)
+    public function setMetric($metric): static
     {
         $this->container['metric'] = $metric;
 
@@ -270,7 +270,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->container['type'];
     }
@@ -282,7 +282,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return $this
      */
-    public function setType($type)
+    public function setType($type): static
     {
         $allowedValues = $this->getTypeAllowableValues();
         if (!in_array($type, $allowedValues, true)) {
@@ -303,7 +303,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return int
      */
-    public function getValue()
+    public function getValue(): int
     {
         return $this->container['value'];
     }
@@ -315,7 +315,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return $this
      */
-    public function setValue($value)
+    public function setValue($value): static
     {
         $this->container['value'] = $value;
 
@@ -328,7 +328,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -340,7 +340,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -353,7 +353,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -369,7 +369,7 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
