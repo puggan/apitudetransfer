@@ -43,10 +43,8 @@ class ObjectSerializer
      *
      * @param mixed  $data   the data to serialize
      * @param string $format the format of the Swagger type of the data
-     *
-     * @return string|object serialized form of $data
      */
-    public static function sanitizeForSerialization($data, $format = null): float|object|bool|int|string|null
+    public static function sanitizeForSerialization($data, $format = null): mixed
     {
         if (is_scalar($data) || null === $data) {
             return $data;
@@ -226,7 +224,7 @@ class ObjectSerializer
      *
      * @return object|array|null an single or an array of $class instances
      */
-    public static function deserialize($data, $class, $httpHeaders = null): object|\DateTime|array|\SplFileObject|null
+    public static function deserialize($data, $class, $httpHeaders = null): object|array|null
     {
         if (null === $data) {
             return null;
