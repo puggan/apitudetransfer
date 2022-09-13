@@ -88,7 +88,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -98,7 +98,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -158,7 +158,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -168,7 +168,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -178,7 +178,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -188,7 +188,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -226,7 +226,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -239,7 +239,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -250,7 +250,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getCode()
+    public function getCode(): string
     {
         return $this->container['code'];
     }
@@ -262,7 +262,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setCode($code): static
     {
         $this->container['code'] = $code;
 
@@ -274,7 +274,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDateTime()
+    public function getDateTime(): string
     {
         return $this->container['date_time'];
     }
@@ -286,7 +286,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDateTime($date_time)
+    public function setDateTime($date_time): static
     {
         $this->container['date_time'] = $date_time;
 
@@ -298,7 +298,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->container['description'];
     }
@@ -310,7 +310,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setDescription($description): static
     {
         $this->container['description'] = $description;
 
@@ -322,7 +322,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\FieldError[]
      */
-    public function getFieldErrors()
+    public function getFieldErrors(): array
     {
         return $this->container['field_errors'];
     }
@@ -334,7 +334,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setFieldErrors($field_errors)
+    public function setFieldErrors($field_errors): static
     {
         $this->container['field_errors'] = $field_errors;
 
@@ -346,7 +346,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return bool
      */
-    public function getIsBadRequest()
+    public function getIsBadRequest(): bool
     {
         return $this->container['is_bad_request'];
     }
@@ -358,7 +358,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsBadRequest($is_bad_request)
+    public function setIsBadRequest($is_bad_request): static
     {
         $this->container['is_bad_request'] = $is_bad_request;
 
@@ -370,7 +370,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getMessage()
+    public function getMessage(): string
     {
         return $this->container['message'];
     }
@@ -382,7 +382,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setMessage($message): static
     {
         $this->container['message'] = $message;
 
@@ -394,7 +394,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Error
      */
-    public function getNestedError()
+    public function getNestedError(): Error
     {
         return $this->container['nested_error'];
     }
@@ -406,7 +406,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setNestedError($nested_error)
+    public function setNestedError($nested_error): static
     {
         $this->container['nested_error'] = $nested_error;
 
@@ -418,7 +418,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getServiceName()
+    public function getServiceName(): string
     {
         return $this->container['service_name'];
     }
@@ -430,7 +430,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setServiceName($service_name)
+    public function setServiceName($service_name): static
     {
         $this->container['service_name'] = $service_name;
 
@@ -442,7 +442,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTraceId()
+    public function getTraceId(): string
     {
         return $this->container['trace_id'];
     }
@@ -454,7 +454,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTraceId($trace_id)
+    public function setTraceId($trace_id): static
     {
         $this->container['trace_id'] = $trace_id;
 
@@ -467,7 +467,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -479,7 +479,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -492,7 +492,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -508,7 +508,7 @@ class Error implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

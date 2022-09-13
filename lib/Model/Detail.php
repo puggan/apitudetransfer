@@ -82,7 +82,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -92,7 +92,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -143,7 +143,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -153,7 +153,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -163,7 +163,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -173,7 +173,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -208,7 +208,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -221,7 +221,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -232,7 +232,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getArrivalFlightNumber()
+    public function getArrivalFlightNumber(): string
     {
         return $this->container['arrival_flight_number'];
     }
@@ -244,7 +244,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setArrivalFlightNumber($arrival_flight_number)
+    public function setArrivalFlightNumber($arrival_flight_number): static
     {
         $this->container['arrival_flight_number'] = $arrival_flight_number;
 
@@ -256,7 +256,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getArrivalShipName()
+    public function getArrivalShipName(): string
     {
         return $this->container['arrival_ship_name'];
     }
@@ -268,7 +268,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setArrivalShipName($arrival_ship_name)
+    public function setArrivalShipName($arrival_ship_name): static
     {
         $this->container['arrival_ship_name'] = $arrival_ship_name;
 
@@ -280,7 +280,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TrainInfo
      */
-    public function getArrivalTrainInfo()
+    public function getArrivalTrainInfo(): TrainInfo
     {
         return $this->container['arrival_train_info'];
     }
@@ -292,7 +292,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setArrivalTrainInfo($arrival_train_info)
+    public function setArrivalTrainInfo($arrival_train_info): static
     {
         $this->container['arrival_train_info'] = $arrival_train_info;
 
@@ -304,7 +304,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDepartureFlightNumber()
+    public function getDepartureFlightNumber(): string
     {
         return $this->container['departure_flight_number'];
     }
@@ -316,7 +316,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDepartureFlightNumber($departure_flight_number)
+    public function setDepartureFlightNumber($departure_flight_number): static
     {
         $this->container['departure_flight_number'] = $departure_flight_number;
 
@@ -328,7 +328,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDepartureShipName()
+    public function getDepartureShipName(): string
     {
         return $this->container['departure_ship_name'];
     }
@@ -340,7 +340,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDepartureShipName($departure_ship_name)
+    public function setDepartureShipName($departure_ship_name): static
     {
         $this->container['departure_ship_name'] = $departure_ship_name;
 
@@ -352,7 +352,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TrainInfo
      */
-    public function getDepartureTrainInfo()
+    public function getDepartureTrainInfo(): TrainInfo
     {
         return $this->container['departure_train_info'];
     }
@@ -364,7 +364,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDepartureTrainInfo($departure_train_info)
+    public function setDepartureTrainInfo($departure_train_info): static
     {
         $this->container['departure_train_info'] = $departure_train_info;
 
@@ -377,7 +377,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -389,7 +389,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -402,7 +402,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -418,7 +418,7 @@ class Detail implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

@@ -74,7 +74,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -84,7 +84,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -123,7 +123,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -133,7 +133,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -143,7 +143,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -153,7 +153,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -184,7 +184,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -203,7 +203,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -214,7 +214,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDate()
+    public function getDate(): string
     {
         return $this->container['date'];
     }
@@ -226,7 +226,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDate($date)
+    public function setDate($date): static
     {
         $this->container['date'] = $date;
 
@@ -238,7 +238,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTime()
+    public function getTime(): string
     {
         return $this->container['time'];
     }
@@ -250,7 +250,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTime($time)
+    public function setTime($time): static
     {
         $this->container['time'] = $time;
 
@@ -263,7 +263,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -275,7 +275,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -288,7 +288,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -304,7 +304,7 @@ class TransferDateTime implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

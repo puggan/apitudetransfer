@@ -81,7 +81,7 @@ class BookingApi
     /**
      * @return Configuration
      */
-    public function getConfig()
+    public function getConfig(): Configuration
     {
         return $this->config;
     }
@@ -99,9 +99,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking($language, $reference, $simulation = 'false')
+    public function booking($language, $reference, $simulation = 'false'): \Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->bookingWithHttpInfo($language, $reference, $simulation);
+        [$response] = $this->bookingWithHttpInfo($language, $reference, $simulation);
         return $response;
     }
 
@@ -118,7 +118,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bookingWithHttpInfo($language, $reference, $simulation = 'false')
+    public function bookingWithHttpInfo($language, $reference, $simulation = 'false'):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->bookingRequest($language, $reference, $simulation);
@@ -202,7 +202,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bookingAsync($language, $reference, $simulation = 'false')
+    public function bookingAsync($language, $reference, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->bookingAsyncWithHttpInfo($language, $reference, $simulation)
             ->then(
@@ -224,7 +224,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bookingAsyncWithHttpInfo($language, $reference, $simulation = 'false')
+    public function bookingAsyncWithHttpInfo($language, $reference, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->bookingRequest($language, $reference, $simulation);
@@ -276,7 +276,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bookingRequest($language, $reference, $simulation = 'false')
+    protected function bookingRequest($language, $reference, $simulation = 'false'):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -402,9 +402,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking1($language, $reference, $simulation = 'false')
+    public function booking1($language, $reference, $simulation = 'false'):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking1WithHttpInfo($language, $reference, $simulation);
+        [$response] = $this->booking1WithHttpInfo($language, $reference, $simulation);
         return $response;
     }
 
@@ -421,7 +421,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking1WithHttpInfo($language, $reference, $simulation = 'false')
+    public function booking1WithHttpInfo($language, $reference, $simulation = 'false'):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking1Request($language, $reference, $simulation);
@@ -505,7 +505,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking1Async($language, $reference, $simulation = 'false')
+    public function booking1Async($language, $reference, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking1AsyncWithHttpInfo($language, $reference, $simulation)
             ->then(
@@ -527,7 +527,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking1AsyncWithHttpInfo($language, $reference, $simulation = 'false')
+    public function booking1AsyncWithHttpInfo($language, $reference, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking1Request($language, $reference, $simulation);
@@ -579,7 +579,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking1Request($language, $reference, $simulation = 'false')
+    protected function booking1Request($language, $reference, $simulation = 'false'):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -704,9 +704,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking2($body, $x_platform_id = null)
+    public function booking2($body, $x_platform_id = null):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking2WithHttpInfo($body, $x_platform_id);
+        [$response] = $this->booking2WithHttpInfo($body, $x_platform_id);
         return $response;
     }
 
@@ -722,7 +722,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking2WithHttpInfo($body, $x_platform_id = null)
+    public function booking2WithHttpInfo($body, $x_platform_id = null):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking2Request($body, $x_platform_id);
@@ -805,7 +805,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking2Async($body, $x_platform_id = null)
+    public function booking2Async($body, $x_platform_id = null):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking2AsyncWithHttpInfo($body, $x_platform_id)
             ->then(
@@ -826,7 +826,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking2AsyncWithHttpInfo($body, $x_platform_id = null)
+    public function booking2AsyncWithHttpInfo($body, $x_platform_id = null):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking2Request($body, $x_platform_id);
@@ -877,7 +877,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking2Request($body, $x_platform_id = null)
+    protected function booking2Request($body, $x_platform_id = null):Request
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -983,9 +983,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking3($body, $x_platform_id = null)
+    public function booking3($body, $x_platform_id = null):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking3WithHttpInfo($body, $x_platform_id);
+        [$response] = $this->booking3WithHttpInfo($body, $x_platform_id);
         return $response;
     }
 
@@ -1001,7 +1001,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking3WithHttpInfo($body, $x_platform_id = null)
+    public function booking3WithHttpInfo($body, $x_platform_id = null):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking3Request($body, $x_platform_id);
@@ -1084,7 +1084,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking3Async($body, $x_platform_id = null)
+    public function booking3Async($body, $x_platform_id = null):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking3AsyncWithHttpInfo($body, $x_platform_id)
             ->then(
@@ -1105,7 +1105,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking3AsyncWithHttpInfo($body, $x_platform_id = null)
+    public function booking3AsyncWithHttpInfo($body, $x_platform_id = null):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking3Request($body, $x_platform_id);
@@ -1156,7 +1156,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking3Request($body, $x_platform_id = null)
+    protected function booking3Request($body, $x_platform_id = null):Request
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -1262,9 +1262,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking4($language, $reference)
+    public function booking4($language, $reference):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking4WithHttpInfo($language, $reference);
+        [$response] = $this->booking4WithHttpInfo($language, $reference);
         return $response;
     }
 
@@ -1280,7 +1280,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking4WithHttpInfo($language, $reference)
+    public function booking4WithHttpInfo($language, $reference):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking4Request($language, $reference);
@@ -1379,7 +1379,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking4Async($language, $reference)
+    public function booking4Async($language, $reference):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking4AsyncWithHttpInfo($language, $reference)
             ->then(
@@ -1400,7 +1400,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking4AsyncWithHttpInfo($language, $reference)
+    public function booking4AsyncWithHttpInfo($language, $reference):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking4Request($language, $reference);
@@ -1451,7 +1451,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking4Request($language, $reference)
+    protected function booking4Request($language, $reference):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -1572,9 +1572,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking5($language, $reference)
+    public function booking5($language, $reference):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking5WithHttpInfo($language, $reference);
+        [$response] = $this->booking5WithHttpInfo($language, $reference);
         return $response;
     }
 
@@ -1590,7 +1590,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking5WithHttpInfo($language, $reference)
+    public function booking5WithHttpInfo($language, $reference):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking5Request($language, $reference);
@@ -1689,7 +1689,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking5Async($language, $reference)
+    public function booking5Async($language, $reference):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking5AsyncWithHttpInfo($language, $reference)
             ->then(
@@ -1710,7 +1710,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking5AsyncWithHttpInfo($language, $reference)
+    public function booking5AsyncWithHttpInfo($language, $reference):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking5Request($language, $reference);
@@ -1761,7 +1761,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking5Request($language, $reference)
+    protected function booking5Request($language, $reference):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -1888,9 +1888,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingListResponse
      */
-    public function booking6($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null)
+    public function booking6($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null):\Swagger\Client\Model\BookingListResponse
     {
-        list($response) = $this->booking6WithHttpInfo($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname);
+        [$response] = $this->booking6WithHttpInfo($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname);
         return $response;
     }
 
@@ -1912,7 +1912,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking6WithHttpInfo($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null)
+    public function booking6WithHttpInfo($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null):array
     {
         $returnType = '\Swagger\Client\Model\BookingListResponse';
         $request = $this->booking6Request($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname);
@@ -2017,7 +2017,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking6Async($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null)
+    public function booking6Async($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking6AsyncWithHttpInfo($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname)
             ->then(
@@ -2044,7 +2044,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking6AsyncWithHttpInfo($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null)
+    public function booking6AsyncWithHttpInfo($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingListResponse';
         $request = $this->booking6Request($language, $from_date, $to_date, $date_type, $offset, $limit, $agency, $surname);
@@ -2101,7 +2101,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking6Request($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null)
+    protected function booking6Request($language, $from_date = null, $to_date = null, $date_type = null, $offset = '1', $limit = '1', $agency = null, $surname = null):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -2238,9 +2238,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking7($language, $reference, $id, $simulation = 'false')
+    public function booking7($language, $reference, $id, $simulation = 'false'):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking7WithHttpInfo($language, $reference, $id, $simulation);
+        [$response] = $this->booking7WithHttpInfo($language, $reference, $id, $simulation);
         return $response;
     }
 
@@ -2258,7 +2258,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking7WithHttpInfo($language, $reference, $id, $simulation = 'false')
+    public function booking7WithHttpInfo($language, $reference, $id, $simulation = 'false'):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking7Request($language, $reference, $id, $simulation);
@@ -2343,7 +2343,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking7Async($language, $reference, $id, $simulation = 'false')
+    public function booking7Async($language, $reference, $id, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking7AsyncWithHttpInfo($language, $reference, $id, $simulation)
             ->then(
@@ -2366,7 +2366,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking7AsyncWithHttpInfo($language, $reference, $id, $simulation = 'false')
+    public function booking7AsyncWithHttpInfo($language, $reference, $id, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking7Request($language, $reference, $id, $simulation);
@@ -2419,7 +2419,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking7Request($language, $reference, $id, $simulation = 'false')
+    protected function booking7Request($language, $reference, $id, $simulation = 'false'):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -2560,9 +2560,9 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\BookingResponse
      */
-    public function booking8($language, $reference, $id, $simulation = 'false')
+    public function booking8($language, $reference, $id, $simulation = 'false'):\Swagger\Client\Model\BookingResponse
     {
-        list($response) = $this->booking8WithHttpInfo($language, $reference, $id, $simulation);
+        [$response] = $this->booking8WithHttpInfo($language, $reference, $id, $simulation);
         return $response;
     }
 
@@ -2580,7 +2580,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\BookingResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function booking8WithHttpInfo($language, $reference, $id, $simulation = 'false')
+    public function booking8WithHttpInfo($language, $reference, $id, $simulation = 'false'):array
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking8Request($language, $reference, $id, $simulation);
@@ -2665,7 +2665,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking8Async($language, $reference, $id, $simulation = 'false')
+    public function booking8Async($language, $reference, $id, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         return $this->booking8AsyncWithHttpInfo($language, $reference, $id, $simulation)
             ->then(
@@ -2688,7 +2688,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function booking8AsyncWithHttpInfo($language, $reference, $id, $simulation = 'false')
+    public function booking8AsyncWithHttpInfo($language, $reference, $id, $simulation = 'false'):\GuzzleHttp\Promise\PromiseInterface
     {
         $returnType = '\Swagger\Client\Model\BookingResponse';
         $request = $this->booking8Request($language, $reference, $id, $simulation);
@@ -2741,7 +2741,7 @@ class BookingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function booking8Request($language, $reference, $id, $simulation = 'false')
+    protected function booking8Request($language, $reference, $id, $simulation = 'false'):Request
     {
         // verify the required parameter 'language' is set
         if ($language === null || (is_array($language) && count($language) === 0)) {
@@ -2874,7 +2874,7 @@ class BookingApi
      * @throws \RuntimeException on file opening failure
      * @return array of http client options
      */
-    protected function createHttpClientOption()
+    protected function createHttpClientOption():array
     {
         $options = [];
         if ($this->config->getDebug()) {

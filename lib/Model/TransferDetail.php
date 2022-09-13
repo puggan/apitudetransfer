@@ -78,7 +78,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -88,7 +88,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -133,7 +133,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -143,7 +143,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -153,7 +153,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -163,7 +163,7 @@ class TransferDetail implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -179,7 +179,7 @@ const TYPE_TRAIN = 'TRAIN';
      *
      * @return string[]
      */
-    public function getDirectionAllowableValues()
+    public function getDirectionAllowableValues(): array
     {
         return [
             self::DIRECTION_ARRIVAL,
@@ -190,7 +190,7 @@ self::DIRECTION_DEPARTURE,        ];
      *
      * @return string[]
      */
-    public function getTypeAllowableValues()
+    public function getTypeAllowableValues(): array
     {
         return [
             self::TYPE_FLIGHT,
@@ -224,7 +224,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -253,7 +253,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -264,7 +264,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return string
      */
-    public function getCode()
+    public function getCode(): string
     {
         return $this->container['code'];
     }
@@ -276,7 +276,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setCode($code): static
     {
         $this->container['code'] = $code;
 
@@ -288,7 +288,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return string
      */
-    public function getCompanyName()
+    public function getCompanyName(): string
     {
         return $this->container['company_name'];
     }
@@ -300,7 +300,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return $this
      */
-    public function setCompanyName($company_name)
+    public function setCompanyName($company_name): static
     {
         $this->container['company_name'] = $company_name;
 
@@ -312,7 +312,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return string
      */
-    public function getDirection()
+    public function getDirection(): string
     {
         return $this->container['direction'];
     }
@@ -324,7 +324,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return $this
      */
-    public function setDirection($direction)
+    public function setDirection($direction): static
     {
         $allowedValues = $this->getDirectionAllowableValues();
         if (!is_null($direction) && !in_array($direction, $allowedValues, true)) {
@@ -345,7 +345,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->container['type'];
     }
@@ -357,7 +357,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return $this
      */
-    public function setType($type)
+    public function setType($type): static
     {
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($type) && !in_array($type, $allowedValues, true)) {
@@ -379,7 +379,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -391,7 +391,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -404,7 +404,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -420,7 +420,7 @@ self::TYPE_TRAIN,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

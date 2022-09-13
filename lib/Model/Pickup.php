@@ -94,7 +94,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -104,7 +104,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -173,7 +173,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -183,7 +183,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -193,7 +193,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -203,7 +203,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -244,7 +244,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -257,7 +257,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -268,7 +268,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getAddress()
+    public function getAddress(): string
     {
         return $this->container['address'];
     }
@@ -280,7 +280,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAddress($address)
+    public function setAddress($address): static
     {
         $this->container['address'] = $address;
 
@@ -292,7 +292,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return double
      */
-    public function getAltitude()
+    public function getAltitude(): float
     {
         return $this->container['altitude'];
     }
@@ -304,7 +304,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAltitude($altitude)
+    public function setAltitude($altitude): static
     {
         $this->container['altitude'] = $altitude;
 
@@ -316,7 +316,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\CheckPickup
      */
-    public function getCheckPickup()
+    public function getCheckPickup(): CheckPickup
     {
         return $this->container['check_pickup'];
     }
@@ -328,7 +328,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCheckPickup($check_pickup)
+    public function setCheckPickup($check_pickup): static
     {
         $this->container['check_pickup'] = $check_pickup;
 
@@ -340,7 +340,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->container['description'];
     }
@@ -352,7 +352,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setDescription($description): static
     {
         $this->container['description'] = $description;
 
@@ -364,7 +364,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getImage()
+    public function getImage(): string
     {
         return $this->container['image'];
     }
@@ -376,7 +376,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setImage($image)
+    public function setImage($image): static
     {
         $this->container['image'] = $image;
 
@@ -388,7 +388,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return double
      */
-    public function getLatitude()
+    public function getLatitude(): float
     {
         return $this->container['latitude'];
     }
@@ -400,7 +400,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLatitude($latitude)
+    public function setLatitude($latitude): static
     {
         $this->container['latitude'] = $latitude;
 
@@ -412,7 +412,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return double
      */
-    public function getLongitude()
+    public function getLongitude(): float
     {
         return $this->container['longitude'];
     }
@@ -424,7 +424,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setLongitude($longitude)
+    public function setLongitude($longitude): static
     {
         $this->container['longitude'] = $longitude;
 
@@ -436,7 +436,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getNumber()
+    public function getNumber(): string
     {
         return $this->container['number'];
     }
@@ -448,7 +448,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setNumber($number)
+    public function setNumber($number): static
     {
         $this->container['number'] = $number;
 
@@ -460,7 +460,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return int
      */
-    public function getPickupId()
+    public function getPickupId(): int
     {
         return $this->container['pickup_id'];
     }
@@ -472,7 +472,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPickupId($pickup_id)
+    public function setPickupId($pickup_id): static
     {
         $this->container['pickup_id'] = $pickup_id;
 
@@ -484,7 +484,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getStopName()
+    public function getStopName(): string
     {
         return $this->container['stop_name'];
     }
@@ -496,7 +496,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setStopName($stop_name)
+    public function setStopName($stop_name): static
     {
         $this->container['stop_name'] = $stop_name;
 
@@ -508,7 +508,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTown()
+    public function getTown(): string
     {
         return $this->container['town'];
     }
@@ -520,7 +520,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTown($town)
+    public function setTown($town): static
     {
         $this->container['town'] = $town;
 
@@ -532,7 +532,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getZip()
+    public function getZip(): string
     {
         return $this->container['zip'];
     }
@@ -544,7 +544,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setZip($zip)
+    public function setZip($zip): static
     {
         $this->container['zip'] = $zip;
 
@@ -557,7 +557,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -569,7 +569,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -582,7 +582,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -598,7 +598,7 @@ class Pickup implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

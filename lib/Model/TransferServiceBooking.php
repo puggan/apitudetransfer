@@ -112,7 +112,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -122,7 +122,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -218,7 +218,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -228,7 +228,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -238,7 +238,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -248,7 +248,7 @@ class TransferServiceBooking implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -264,7 +264,7 @@ const TRANSFER_TYPE_SHARED = 'SHARED';
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getStatusAllowableValues(): array
     {
         return [
             self::STATUS_CONFIRMED,
@@ -276,7 +276,7 @@ self::STATUS_MODIFIED,        ];
      *
      * @return string[]
      */
-    public function getTransferTypeAllowableValues()
+    public function getTransferTypeAllowableValues(): array
     {
         return [
             self::TRANSFER_TYPE__PRIVATE,
@@ -326,7 +326,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -382,7 +382,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -393,7 +393,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getArrivalFlightNumber()
+    public function getArrivalFlightNumber(): string
     {
         return $this->container['arrival_flight_number'];
     }
@@ -405,7 +405,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setArrivalFlightNumber($arrival_flight_number)
+    public function setArrivalFlightNumber($arrival_flight_number): static
     {
         $this->container['arrival_flight_number'] = $arrival_flight_number;
 
@@ -417,7 +417,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getArrivalShipName()
+    public function getArrivalShipName(): string
     {
         return $this->container['arrival_ship_name'];
     }
@@ -429,7 +429,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setArrivalShipName($arrival_ship_name)
+    public function setArrivalShipName($arrival_ship_name): static
     {
         $this->container['arrival_ship_name'] = $arrival_ship_name;
 
@@ -441,7 +441,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\TrainInfo
      */
-    public function getArrivalTrainInfo()
+    public function getArrivalTrainInfo(): TrainInfo
     {
         return $this->container['arrival_train_info'];
     }
@@ -453,7 +453,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setArrivalTrainInfo($arrival_train_info)
+    public function setArrivalTrainInfo($arrival_train_info): static
     {
         $this->container['arrival_train_info'] = $arrival_train_info;
 
@@ -465,7 +465,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\CancellationPolicy[]
      */
-    public function getCancellationPolicies()
+    public function getCancellationPolicies(): array
     {
         return $this->container['cancellation_policies'];
     }
@@ -477,7 +477,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setCancellationPolicies($cancellation_policies)
+    public function setCancellationPolicies($cancellation_policies): static
     {
         $this->container['cancellation_policies'] = $cancellation_policies;
 
@@ -489,7 +489,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\Category
      */
-    public function getCategory()
+    public function getCategory(): Category
     {
         return $this->container['category'];
     }
@@ -501,7 +501,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setCategory($category)
+    public function setCategory($category): static
     {
         $this->container['category'] = $category;
 
@@ -513,7 +513,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\TransferServiceContent
      */
-    public function getContent()
+    public function getContent(): TransferServiceContent
     {
         return $this->container['content'];
     }
@@ -525,7 +525,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setContent($content)
+    public function setContent($content): static
     {
         $this->container['content'] = $content;
 
@@ -537,7 +537,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getDepartureFlightNumber()
+    public function getDepartureFlightNumber(): string
     {
         return $this->container['departure_flight_number'];
     }
@@ -549,7 +549,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setDepartureFlightNumber($departure_flight_number)
+    public function setDepartureFlightNumber($departure_flight_number): static
     {
         $this->container['departure_flight_number'] = $departure_flight_number;
 
@@ -561,7 +561,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getDepartureShipName()
+    public function getDepartureShipName(): string
     {
         return $this->container['departure_ship_name'];
     }
@@ -573,7 +573,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setDepartureShipName($departure_ship_name)
+    public function setDepartureShipName($departure_ship_name): static
     {
         $this->container['departure_ship_name'] = $departure_ship_name;
 
@@ -585,7 +585,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\TrainInfo
      */
-    public function getDepartureTrainInfo()
+    public function getDepartureTrainInfo(): TrainInfo
     {
         return $this->container['departure_train_info'];
     }
@@ -597,7 +597,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setDepartureTrainInfo($departure_train_info)
+    public function setDepartureTrainInfo($departure_train_info): static
     {
         $this->container['departure_train_info'] = $departure_train_info;
 
@@ -609,7 +609,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return int
      */
-    public function getFactsheetId()
+    public function getFactsheetId(): int
     {
         return $this->container['factsheet_id'];
     }
@@ -621,7 +621,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setFactsheetId($factsheet_id)
+    public function setFactsheetId($factsheet_id): static
     {
         $this->container['factsheet_id'] = $factsheet_id;
 
@@ -633,7 +633,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->container['id'];
     }
@@ -645,7 +645,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setId($id)
+    public function setId($id): static
     {
         $this->container['id'] = $id;
 
@@ -657,7 +657,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\Link[]
      */
-    public function getLinks()
+    public function getLinks(): array
     {
         return $this->container['links'];
     }
@@ -669,7 +669,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setLinks($links)
+    public function setLinks($links): static
     {
         $this->container['links'] = $links;
 
@@ -681,7 +681,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\Pax[]
      */
-    public function getPaxes()
+    public function getPaxes(): array
     {
         return $this->container['paxes'];
     }
@@ -693,7 +693,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setPaxes($paxes)
+    public function setPaxes($paxes): static
     {
         $this->container['paxes'] = $paxes;
 
@@ -705,7 +705,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\PickupInformation
      */
-    public function getPickupInformation()
+    public function getPickupInformation(): PickupInformation
     {
         return $this->container['pickup_information'];
     }
@@ -717,7 +717,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setPickupInformation($pickup_information)
+    public function setPickupInformation($pickup_information): static
     {
         $this->container['pickup_information'] = $pickup_information;
 
@@ -729,7 +729,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\Price
      */
-    public function getPrice()
+    public function getPrice(): Price
     {
         return $this->container['price'];
     }
@@ -741,7 +741,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setPrice($price)
+    public function setPrice($price): static
     {
         $this->container['price'] = $price;
 
@@ -753,7 +753,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getRateKey()
+    public function getRateKey(): string
     {
         return $this->container['rate_key'];
     }
@@ -765,7 +765,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setRateKey($rate_key)
+    public function setRateKey($rate_key): static
     {
         $this->container['rate_key'] = $rate_key;
 
@@ -777,7 +777,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getSourceMarketEmergencyNumber()
+    public function getSourceMarketEmergencyNumber(): string
     {
         return $this->container['source_market_emergency_number'];
     }
@@ -789,7 +789,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setSourceMarketEmergencyNumber($source_market_emergency_number)
+    public function setSourceMarketEmergencyNumber($source_market_emergency_number): static
     {
         $this->container['source_market_emergency_number'] = $source_market_emergency_number;
 
@@ -801,7 +801,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getStatus()
+    public function getStatus(): string
     {
         return $this->container['status'];
     }
@@ -813,7 +813,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setStatus($status): static
     {
         $allowedValues = $this->getStatusAllowableValues();
         if (!in_array($status, $allowedValues, true)) {
@@ -834,7 +834,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\TransferDetail[]
      */
-    public function getTransferDetails()
+    public function getTransferDetails(): array
     {
         return $this->container['transfer_details'];
     }
@@ -846,7 +846,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setTransferDetails($transfer_details)
+    public function setTransferDetails($transfer_details): static
     {
         $this->container['transfer_details'] = $transfer_details;
 
@@ -858,7 +858,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return string
      */
-    public function getTransferType()
+    public function getTransferType(): string
     {
         return $this->container['transfer_type'];
     }
@@ -870,7 +870,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setTransferType($transfer_type)
+    public function setTransferType($transfer_type): static
     {
         $allowedValues = $this->getTransferTypeAllowableValues();
         if (!in_array($transfer_type, $allowedValues, true)) {
@@ -891,7 +891,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return \Swagger\Client\Model\Vehicle
      */
-    public function getVehicle()
+    public function getVehicle(): Vehicle
     {
         return $this->container['vehicle'];
     }
@@ -903,7 +903,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return $this
      */
-    public function setVehicle($vehicle)
+    public function setVehicle($vehicle): static
     {
         $this->container['vehicle'] = $vehicle;
 
@@ -916,7 +916,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -928,7 +928,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -941,7 +941,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -957,7 +957,7 @@ self::TRANSFER_TYPE_SHARED,        ];
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

@@ -80,7 +80,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -90,7 +90,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -138,7 +138,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -148,7 +148,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -158,7 +158,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -168,7 +168,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -202,7 +202,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -227,7 +227,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -238,7 +238,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getDate()
+    public function getDate(): string
     {
         return $this->container['date'];
     }
@@ -250,7 +250,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDate($date)
+    public function setDate($date): static
     {
         $this->container['date'] = $date;
 
@@ -262,7 +262,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferPoint
      */
-    public function getFrom()
+    public function getFrom(): TransferPoint
     {
         return $this->container['from'];
     }
@@ -274,7 +274,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setFrom($from)
+    public function setFrom($from): static
     {
         $this->container['from'] = $from;
 
@@ -286,7 +286,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\Pickup
      */
-    public function getPickup()
+    public function getPickup(): Pickup
     {
         return $this->container['pickup'];
     }
@@ -298,7 +298,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPickup($pickup)
+    public function setPickup($pickup): static
     {
         $this->container['pickup'] = $pickup;
 
@@ -310,7 +310,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTime()
+    public function getTime(): string
     {
         return $this->container['time'];
     }
@@ -322,7 +322,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTime($time)
+    public function setTime($time): static
     {
         $this->container['time'] = $time;
 
@@ -334,7 +334,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return \Swagger\Client\Model\TransferPoint
      */
-    public function getTo()
+    public function getTo(): TransferPoint
     {
         return $this->container['to'];
     }
@@ -346,7 +346,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTo($to)
+    public function setTo($to): static
     {
         $this->container['to'] = $to;
 
@@ -359,7 +359,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -371,7 +371,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -384,7 +384,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -400,7 +400,7 @@ class PickupInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }

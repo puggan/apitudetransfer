@@ -80,7 +80,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerTypes()
+    public static function swaggerTypes(): array
     {
         return self::$swaggerTypes;
     }
@@ -90,7 +90,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function swaggerFormats()
+    public static function swaggerFormats(): array
     {
         return self::$swaggerFormats;
     }
@@ -138,7 +138,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function attributeMap()
+    public static function attributeMap(): array
     {
         return self::$attributeMap;
     }
@@ -148,7 +148,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function setters()
+    public static function setters(): array
     {
         return self::$setters;
     }
@@ -158,7 +158,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array
      */
-    public static function getters()
+    public static function getters(): array
     {
         return self::$getters;
     }
@@ -168,7 +168,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
+    public function getModelName(): string
     {
         return self::$swaggerModelName;
     }
@@ -202,7 +202,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -215,7 +215,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -226,7 +226,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getAddress()
+    public function getAddress(): string
     {
         return $this->container['address'];
     }
@@ -238,7 +238,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAddress($address)
+    public function setAddress($address): static
     {
         $this->container['address'] = $address;
 
@@ -250,7 +250,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getCountry()
+    public function getCountry(): string
     {
         return $this->container['country'];
     }
@@ -262,7 +262,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCountry($country)
+    public function setCountry($country): static
     {
         $this->container['country'] = $country;
 
@@ -274,7 +274,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->container['name'];
     }
@@ -286,7 +286,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setName($name)
+    public function setName($name): static
     {
         $this->container['name'] = $name;
 
@@ -298,7 +298,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getTown()
+    public function getTown(): string
     {
         return $this->container['town'];
     }
@@ -310,7 +310,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTown($town)
+    public function setTown($town): static
     {
         $this->container['town'] = $town;
 
@@ -322,7 +322,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getZip()
+    public function getZip(): string
     {
         return $this->container['zip'];
     }
@@ -334,7 +334,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setZip($zip)
+    public function setZip($zip): static
     {
         $this->container['zip'] = $zip;
 
@@ -347,7 +347,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -359,7 +359,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -372,7 +372,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -388,7 +388,7 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
