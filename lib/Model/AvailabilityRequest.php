@@ -248,9 +248,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets come_back
      *
-     * @return \Swagger\Client\Model\TransferDateTime
+     * @return ?\Swagger\Client\Model\TransferDateTime
      */
-    public function getComeBack(): TransferDateTime
+    public function getComeBack(): ?TransferDateTime
     {
         return $this->container['come_back'];
     }
@@ -272,9 +272,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets departure
      *
-     * @return \Swagger\Client\Model\TransferDateTime
+     * @return ?\Swagger\Client\Model\TransferDateTime
      */
-    public function getDeparture(): TransferDateTime
+    public function getDeparture(): ?TransferDateTime
     {
         return $this->container['departure'];
     }
@@ -296,9 +296,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets from
      *
-     * @return \Swagger\Client\Model\TransferPoint
+     * @return ?\Swagger\Client\Model\TransferPoint
      */
-    public function getFrom(): TransferPoint
+    public function getFrom(): ?TransferPoint
     {
         return $this->container['from'];
     }
@@ -320,9 +320,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return string
+     * @return ?string
      */
-    public function getLanguage(): string
+    public function getLanguage(): ?string
     {
         return $this->container['language'];
     }
@@ -344,9 +344,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets occupancy
      *
-     * @return \Swagger\Client\Model\Occupancy
+     * @return ?\Swagger\Client\Model\Occupancy
      */
-    public function getOccupancy(): Occupancy
+    public function getOccupancy(): ?Occupancy
     {
         return $this->container['occupancy'];
     }
@@ -368,9 +368,9 @@ class AvailabilityRequest implements ModelInterface, ArrayAccess
     /**
      * Gets to
      *
-     * @return \Swagger\Client\Model\TransferPoint
+     * @return ?\Swagger\Client\Model\TransferPoint
      */
-    public function getTo(): TransferPoint
+    public function getTo(): ?TransferPoint
     {
         return $this->container['to'];
     }

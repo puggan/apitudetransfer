@@ -254,9 +254,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \Swagger\Client\Model\Category
+     * @return ?\Swagger\Client\Model\Category
      */
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->container['category'];
     }
@@ -278,9 +278,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets customer_transfer_time_info
      *
-     * @return \Swagger\Client\Model\TransferTimeInfo[]
+     * @return ?\Swagger\Client\Model\TransferTimeInfo[]
      */
-    public function getCustomerTransferTimeInfo(): array
+    public function getCustomerTransferTimeInfo(): ?array
     {
         return $this->container['customer_transfer_time_info'];
     }
@@ -302,9 +302,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets images
      *
-     * @return \Swagger\Client\Model\Image[]
+     * @return ?\Swagger\Client\Model\Image[]
      */
-    public function getImages(): array
+    public function getImages(): ?array
     {
         return $this->container['images'];
     }
@@ -326,9 +326,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets supplier_transfer_time_info
      *
-     * @return \Swagger\Client\Model\TransferTimeInfo[]
+     * @return ?\Swagger\Client\Model\TransferTimeInfo[]
      */
-    public function getSupplierTransferTimeInfo(): array
+    public function getSupplierTransferTimeInfo(): ?array
     {
         return $this->container['supplier_transfer_time_info'];
     }
@@ -350,9 +350,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets transfer_detail_info
      *
-     * @return \Swagger\Client\Model\TransferDetailInfo[]
+     * @return ?\Swagger\Client\Model\TransferDetailInfo[]
      */
-    public function getTransferDetailInfo(): array
+    public function getTransferDetailInfo(): ?array
     {
         return $this->container['transfer_detail_info'];
     }
@@ -374,9 +374,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets transfer_remarks
      *
-     * @return \Swagger\Client\Model\TransferRemarks[]
+     * @return ?\Swagger\Client\Model\TransferRemarks[]
      */
-    public function getTransferRemarks(): array
+    public function getTransferRemarks(): ?array
     {
         return $this->container['transfer_remarks'];
     }
@@ -398,9 +398,9 @@ class TransferServiceContent implements ModelInterface, ArrayAccess
     /**
      * Gets vehicle
      *
-     * @return \Swagger\Client\Model\Vehicle
+     * @return ?\Swagger\Client\Model\Vehicle
      */
-    public function getVehicle(): Vehicle
+    public function getVehicle(): ?Vehicle
     {
         return $this->container['vehicle'];
     }

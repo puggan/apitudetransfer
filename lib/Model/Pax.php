@@ -180,9 +180,9 @@ const TYPE_INFANT = 'INFANT';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_ADULT,
@@ -259,9 +259,9 @@ self::TYPE_INFANT,        ];
     /**
      * Gets email
      *
-     * @return string
+     * @return ?string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->container['email'];
     }
@@ -283,9 +283,9 @@ self::TYPE_INFANT,        ];
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->container['name'];
     }
@@ -307,9 +307,9 @@ self::TYPE_INFANT,        ];
     /**
      * Gets phone
      *
-     * @return string
+     * @return ?string
      */
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->container['phone'];
     }
@@ -331,9 +331,9 @@ self::TYPE_INFANT,        ];
     /**
      * Gets surname
      *
-     * @return string
+     * @return ?string
      */
-    public function getSurname(): string
+    public function getSurname(): ?string
     {
         return $this->container['surname'];
     }
@@ -355,9 +355,9 @@ self::TYPE_INFANT,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }

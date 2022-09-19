@@ -227,9 +227,9 @@ class TransferConfirm implements ModelInterface, ArrayAccess
     /**
      * Gets detail
      *
-     * @return \Swagger\Client\Model\Detail
+     * @return ?\Swagger\Client\Model\Detail
      */
-    public function getDetail(): Detail
+    public function getDetail(): ?Detail
     {
         return $this->container['detail'];
     }
@@ -251,9 +251,9 @@ class TransferConfirm implements ModelInterface, ArrayAccess
     /**
      * Gets dropoff_information
      *
-     * @return \Swagger\Client\Model\DropoffInformation
+     * @return ?\Swagger\Client\Model\DropoffInformation
      */
-    public function getDropoffInformation(): DropoffInformation
+    public function getDropoffInformation(): ?DropoffInformation
     {
         return $this->container['dropoff_information'];
     }
@@ -275,9 +275,9 @@ class TransferConfirm implements ModelInterface, ArrayAccess
     /**
      * Gets pickup_information
      *
-     * @return \Swagger\Client\Model\ConfirmPickupInformation
+     * @return ?\Swagger\Client\Model\ConfirmPickupInformation
      */
-    public function getPickupInformation(): ConfirmPickupInformation
+    public function getPickupInformation(): ?ConfirmPickupInformation
     {
         return $this->container['pickup_information'];
     }
@@ -299,9 +299,9 @@ class TransferConfirm implements ModelInterface, ArrayAccess
     /**
      * Gets rate_key
      *
-     * @return string
+     * @return ?string
      */
-    public function getRateKey(): string
+    public function getRateKey(): ?string
     {
         return $this->container['rate_key'];
     }
@@ -323,9 +323,9 @@ class TransferConfirm implements ModelInterface, ArrayAccess
     /**
      * Gets transfer_details
      *
-     * @return \Swagger\Client\Model\TransferDetail[]
+     * @return ?\Swagger\Client\Model\TransferDetail[]
      */
-    public function getTransferDetails(): array
+    public function getTransferDetails(): ?array
     {
         return $this->container['transfer_details'];
     }

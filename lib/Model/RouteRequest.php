@@ -205,9 +205,9 @@ class RouteRequest implements ModelInterface, ArrayAccess
     /**
      * Gets date_time
      *
-     * @return string
+     * @return ?string
      */
-    public function getDateTime(): string
+    public function getDateTime(): ?string
     {
         return $this->container['date_time'];
     }
@@ -229,9 +229,9 @@ class RouteRequest implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->container['id'];
     }

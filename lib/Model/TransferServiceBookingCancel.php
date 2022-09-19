@@ -202,9 +202,9 @@ const TRANSFER_TYPE_SHARED = 'SHARED';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getStatusAllowableValues(): array
+    public function getStatusAllowableValues(): ?array
     {
         return [
             self::STATUS_CONFIRMED,
@@ -214,9 +214,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTransferTypeAllowableValues(): array
+    public function getTransferTypeAllowableValues(): ?array
     {
         return [
             self::TRANSFER_TYPE__PRIVATE,
@@ -313,9 +313,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets category
      *
-     * @return \Swagger\Client\Model\Category
+     * @return ?\Swagger\Client\Model\Category
      */
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->container['category'];
     }
@@ -337,9 +337,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets factsheet_id
      *
-     * @return int
+     * @return ?int
      */
-    public function getFactsheetId(): int
+    public function getFactsheetId(): ?int
     {
         return $this->container['factsheet_id'];
     }
@@ -361,9 +361,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets id
      *
-     * @return int
+     * @return ?int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->container['id'];
     }
@@ -385,9 +385,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets paxes
      *
-     * @return \Swagger\Client\Model\Pax[]
+     * @return ?\Swagger\Client\Model\Pax[]
      */
-    public function getPaxes(): array
+    public function getPaxes(): ?array
     {
         return $this->container['paxes'];
     }
@@ -409,9 +409,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets pickup_information
      *
-     * @return \Swagger\Client\Model\PickupInformation
+     * @return ?\Swagger\Client\Model\PickupInformation
      */
-    public function getPickupInformation(): PickupInformation
+    public function getPickupInformation(): ?PickupInformation
     {
         return $this->container['pickup_information'];
     }
@@ -433,9 +433,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets price
      *
-     * @return \Swagger\Client\Model\Price
+     * @return ?\Swagger\Client\Model\Price
      */
-    public function getPrice(): Price
+    public function getPrice(): ?Price
     {
         return $this->container['price'];
     }
@@ -457,9 +457,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->container['status'];
     }
@@ -490,9 +490,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets transfer_type
      *
-     * @return string
+     * @return ?string
      */
-    public function getTransferType(): string
+    public function getTransferType(): ?string
     {
         return $this->container['transfer_type'];
     }
@@ -523,9 +523,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets vehicle
      *
-     * @return \Swagger\Client\Model\Vehicle
+     * @return ?\Swagger\Client\Model\Vehicle
      */
-    public function getVehicle(): Vehicle
+    public function getVehicle(): ?Vehicle
     {
         return $this->container['vehicle'];
     }

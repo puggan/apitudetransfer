@@ -212,9 +212,9 @@ class Link implements ModelInterface, ArrayAccess
     /**
      * Gets href
      *
-     * @return string
+     * @return ?string
      */
-    public function getHref(): string
+    public function getHref(): ?string
     {
         return $this->container['href'];
     }
@@ -236,9 +236,9 @@ class Link implements ModelInterface, ArrayAccess
     /**
      * Gets method
      *
-     * @return string
+     * @return ?string
      */
-    public function getMethod(): string
+    public function getMethod(): ?string
     {
         return $this->container['method'];
     }
@@ -260,9 +260,9 @@ class Link implements ModelInterface, ArrayAccess
     /**
      * Gets rel
      *
-     * @return string
+     * @return ?string
      */
-    public function getRel(): string
+    public function getRel(): ?string
     {
         return $this->container['rel'];
     }

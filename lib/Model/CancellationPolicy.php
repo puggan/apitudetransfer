@@ -221,9 +221,9 @@ class CancellationPolicy implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->container['amount'];
     }
@@ -245,9 +245,9 @@ class CancellationPolicy implements ModelInterface, ArrayAccess
     /**
      * Gets currency_id
      *
-     * @return string
+     * @return ?string
      */
-    public function getCurrencyId(): string
+    public function getCurrencyId(): ?string
     {
         return $this->container['currency_id'];
     }
@@ -269,9 +269,9 @@ class CancellationPolicy implements ModelInterface, ArrayAccess
     /**
      * Gets from
      *
-     * @return string
+     * @return ?string
      */
-    public function getFrom(): string
+    public function getFrom(): ?string
     {
         return $this->container['from'];
     }

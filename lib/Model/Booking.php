@@ -235,9 +235,9 @@ const STATUS_MODIFIED = 'MODIFIED';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getStatusAllowableValues(): array
+    public function getStatusAllowableValues(): ?array
     {
         return [
             self::STATUS_CONFIRMED,
@@ -349,9 +349,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets booking_file_id
      *
-     * @return string
+     * @return ?string
      */
-    public function getBookingFileId(): string
+    public function getBookingFileId(): ?string
     {
         return $this->container['booking_file_id'];
     }
@@ -373,9 +373,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets client_reference
      *
-     * @return string
+     * @return ?string
      */
-    public function getClientReference(): string
+    public function getClientReference(): ?string
     {
         return $this->container['client_reference'];
     }
@@ -397,9 +397,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets creation_date
      *
-     * @return string
+     * @return ?string
      */
-    public function getCreationDate(): string
+    public function getCreationDate(): ?string
     {
         return $this->container['creation_date'];
     }
@@ -421,9 +421,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets currency
      *
-     * @return string
+     * @return ?string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->container['currency'];
     }
@@ -445,9 +445,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets holder
      *
-     * @return \Swagger\Client\Model\Pax
+     * @return ?\Swagger\Client\Model\Pax
      */
-    public function getHolder(): Pax
+    public function getHolder(): ?Pax
     {
         return $this->container['holder'];
     }
@@ -469,9 +469,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets invoice_company
      *
-     * @return \Swagger\Client\Model\InvoiceCompany
+     * @return ?\Swagger\Client\Model\InvoiceCompany
      */
-    public function getInvoiceCompany(): InvoiceCompany
+    public function getInvoiceCompany(): ?InvoiceCompany
     {
         return $this->container['invoice_company'];
     }
@@ -493,9 +493,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets links
      *
-     * @return \Swagger\Client\Model\Link[]
+     * @return ?\Swagger\Client\Model\Link[]
      */
-    public function getLinks(): array
+    public function getLinks(): ?array
     {
         return $this->container['links'];
     }
@@ -517,9 +517,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets modifications_policies
      *
-     * @return \Swagger\Client\Model\ModificationsPolicies
+     * @return ?\Swagger\Client\Model\ModificationsPolicies
      */
-    public function getModificationsPolicies(): ModificationsPolicies
+    public function getModificationsPolicies(): ?ModificationsPolicies
     {
         return $this->container['modifications_policies'];
     }
@@ -541,9 +541,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets pending_amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getPendingAmount(): float
+    public function getPendingAmount(): ?float
     {
         return $this->container['pending_amount'];
     }
@@ -565,9 +565,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets reference
      *
-     * @return string
+     * @return ?string
      */
-    public function getReference(): string
+    public function getReference(): ?string
     {
         return $this->container['reference'];
     }
@@ -589,9 +589,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets remark
      *
-     * @return string
+     * @return ?string
      */
-    public function getRemark(): string
+    public function getRemark(): ?string
     {
         return $this->container['remark'];
     }
@@ -613,9 +613,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets status
      *
-     * @return string
+     * @return ?string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->container['status'];
     }
@@ -646,9 +646,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets supplier
      *
-     * @return \Swagger\Client\Model\InvoiceCompany
+     * @return ?\Swagger\Client\Model\InvoiceCompany
      */
-    public function getSupplier(): InvoiceCompany
+    public function getSupplier(): ?InvoiceCompany
     {
         return $this->container['supplier'];
     }
@@ -670,9 +670,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets total_amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getTotalAmount(): float
+    public function getTotalAmount(): ?float
     {
         return $this->container['total_amount'];
     }
@@ -694,9 +694,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets total_net_amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getTotalNetAmount(): float
+    public function getTotalNetAmount(): ?float
     {
         return $this->container['total_net_amount'];
     }
@@ -718,9 +718,9 @@ self::STATUS_MODIFIED,        ];
     /**
      * Gets transfers
      *
-     * @return \Swagger\Client\Model\TransferServiceBookingCancel[]
+     * @return ?\Swagger\Client\Model\TransferServiceBookingCancel[]
      */
-    public function getTransfers(): array
+    public function getTransfers(): ?array
     {
         return $this->container['transfers'];
     }

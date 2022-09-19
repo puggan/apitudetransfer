@@ -212,9 +212,9 @@ class TransferDateTime implements ModelInterface, ArrayAccess
     /**
      * Gets date
      *
-     * @return string
+     * @return ?string
      */
-    public function getDate(): string
+    public function getDate(): ?string
     {
         return $this->container['date'];
     }
@@ -236,9 +236,9 @@ class TransferDateTime implements ModelInterface, ArrayAccess
     /**
      * Gets time
      *
-     * @return string
+     * @return ?string
      */
-    public function getTime(): string
+    public function getTime(): ?string
     {
         return $this->container['time'];
     }

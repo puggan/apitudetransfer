@@ -169,9 +169,9 @@ const TYPE_AGENCY = 'AGENCY';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_CONTRACT,
@@ -233,9 +233,9 @@ self::TYPE_AGENCY,        ];
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->container['description'];
     }
@@ -257,9 +257,9 @@ self::TYPE_AGENCY,        ];
     /**
      * Gets mandatory
      *
-     * @return bool
+     * @return ?bool
      */
-    public function getMandatory(): bool
+    public function getMandatory(): ?bool
     {
         return $this->container['mandatory'];
     }
@@ -281,9 +281,9 @@ self::TYPE_AGENCY,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }

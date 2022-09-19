@@ -248,9 +248,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->container['code'];
     }
@@ -272,9 +272,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets date_time
      *
-     * @return string
+     * @return ?string
      */
-    public function getDateTime(): string
+    public function getDateTime(): ?string
     {
         return $this->container['date_time'];
     }
@@ -296,9 +296,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->container['description'];
     }
@@ -320,9 +320,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets field_errors
      *
-     * @return \Swagger\Client\Model\FieldError[]
+     * @return ?\Swagger\Client\Model\FieldError[]
      */
-    public function getFieldErrors(): array
+    public function getFieldErrors(): ?array
     {
         return $this->container['field_errors'];
     }
@@ -344,9 +344,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets is_bad_request
      *
-     * @return bool
+     * @return ?bool
      */
-    public function getIsBadRequest(): bool
+    public function getIsBadRequest(): ?bool
     {
         return $this->container['is_bad_request'];
     }
@@ -368,9 +368,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->container['message'];
     }
@@ -392,9 +392,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets nested_error
      *
-     * @return \Swagger\Client\Model\Error
+     * @return ?\Swagger\Client\Model\Error
      */
-    public function getNestedError(): Error
+    public function getNestedError(): ?Error
     {
         return $this->container['nested_error'];
     }
@@ -416,9 +416,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets service_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getServiceName(): string
+    public function getServiceName(): ?string
     {
         return $this->container['service_name'];
     }
@@ -440,9 +440,9 @@ class Error implements ModelInterface, ArrayAccess
     /**
      * Gets trace_id
      *
-     * @return string
+     * @return ?string
      */
-    public function getTraceId(): string
+    public function getTraceId(): ?string
     {
         return $this->container['trace_id'];
     }

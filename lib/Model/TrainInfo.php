@@ -212,9 +212,9 @@ class TrainInfo implements ModelInterface, ArrayAccess
     /**
      * Gets train_company_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getTrainCompanyName(): string
+    public function getTrainCompanyName(): ?string
     {
         return $this->container['train_company_name'];
     }
@@ -236,9 +236,9 @@ class TrainInfo implements ModelInterface, ArrayAccess
     /**
      * Gets train_number
      *
-     * @return string
+     * @return ?string
      */
-    public function getTrainNumber(): string
+    public function getTrainNumber(): ?string
     {
         return $this->container['train_number'];
     }

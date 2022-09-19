@@ -203,9 +203,9 @@ class BookingResponse implements ModelInterface, ArrayAccess
     /**
      * Gets bookings
      *
-     * @return \Swagger\Client\Model\Booking[]
+     * @return ?\Swagger\Client\Model\Booking[]
      */
-    public function getBookings(): array
+    public function getBookings(): ?array
     {
         return $this->container['bookings'];
     }

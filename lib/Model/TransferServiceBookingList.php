@@ -189,9 +189,9 @@ const TRANSFER_TYPE_SHARED = 'SHARED';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTransferTypeAllowableValues(): array
+    public function getTransferTypeAllowableValues(): ?array
     {
         return [
             self::TRANSFER_TYPE__PRIVATE,
@@ -278,9 +278,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets cancellation_policies
      *
-     * @return \Swagger\Client\Model\CancellationPolicy[]
+     * @return ?\Swagger\Client\Model\CancellationPolicy[]
      */
-    public function getCancellationPolicies(): array
+    public function getCancellationPolicies(): ?array
     {
         return $this->container['cancellation_policies'];
     }
@@ -302,9 +302,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets category
      *
-     * @return \Swagger\Client\Model\Category
+     * @return ?\Swagger\Client\Model\Category
      */
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
         return $this->container['category'];
     }
@@ -326,9 +326,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets links
      *
-     * @return \Swagger\Client\Model\Link[]
+     * @return ?\Swagger\Client\Model\Link[]
      */
-    public function getLinks(): array
+    public function getLinks(): ?array
     {
         return $this->container['links'];
     }
@@ -350,9 +350,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets pickup_information
      *
-     * @return \Swagger\Client\Model\PickupInformation
+     * @return ?\Swagger\Client\Model\PickupInformation
      */
-    public function getPickupInformation(): PickupInformation
+    public function getPickupInformation(): ?PickupInformation
     {
         return $this->container['pickup_information'];
     }
@@ -374,9 +374,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets price
      *
-     * @return \Swagger\Client\Model\Price
+     * @return ?\Swagger\Client\Model\Price
      */
-    public function getPrice(): Price
+    public function getPrice(): ?Price
     {
         return $this->container['price'];
     }
@@ -398,9 +398,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets transfer_type
      *
-     * @return string
+     * @return ?string
      */
-    public function getTransferType(): string
+    public function getTransferType(): ?string
     {
         return $this->container['transfer_type'];
     }
@@ -431,9 +431,9 @@ self::TRANSFER_TYPE_SHARED,        ];
     /**
      * Gets vehicle
      *
-     * @return \Swagger\Client\Model\Vehicle
+     * @return ?\Swagger\Client\Model\Vehicle
      */
-    public function getVehicle(): Vehicle
+    public function getVehicle(): ?Vehicle
     {
         return $this->container['vehicle'];
     }

@@ -230,9 +230,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets arrival_flight_number
      *
-     * @return string
+     * @return ?string
      */
-    public function getArrivalFlightNumber(): string
+    public function getArrivalFlightNumber(): ?string
     {
         return $this->container['arrival_flight_number'];
     }
@@ -254,9 +254,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets arrival_ship_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getArrivalShipName(): string
+    public function getArrivalShipName(): ?string
     {
         return $this->container['arrival_ship_name'];
     }
@@ -278,9 +278,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets arrival_train_info
      *
-     * @return \Swagger\Client\Model\TrainInfo
+     * @return ?TrainInfo
      */
-    public function getArrivalTrainInfo(): TrainInfo
+    public function getArrivalTrainInfo(): ?TrainInfo
     {
         return $this->container['arrival_train_info'];
     }
@@ -288,7 +288,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Sets arrival_train_info
      *
-     * @param \Swagger\Client\Model\TrainInfo $arrival_train_info arrival_train_info
+     * @param TrainInfo $arrival_train_info arrival_train_info
      *
      * @return $this
      */
@@ -302,9 +302,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets departure_flight_number
      *
-     * @return string
+     * @return ?string
      */
-    public function getDepartureFlightNumber(): string
+    public function getDepartureFlightNumber(): ?string
     {
         return $this->container['departure_flight_number'];
     }
@@ -326,9 +326,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets departure_ship_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getDepartureShipName(): string
+    public function getDepartureShipName(): ?string
     {
         return $this->container['departure_ship_name'];
     }
@@ -350,9 +350,9 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Gets departure_train_info
      *
-     * @return \Swagger\Client\Model\TrainInfo
+     * @return ?TrainInfo
      */
-    public function getDepartureTrainInfo(): TrainInfo
+    public function getDepartureTrainInfo(): ?TrainInfo
     {
         return $this->container['departure_train_info'];
     }
@@ -360,7 +360,7 @@ class Detail implements ModelInterface, ArrayAccess
     /**
      * Sets departure_train_info
      *
-     * @param \Swagger\Client\Model\TrainInfo $departure_train_info departure_train_info
+     * @param TrainInfo $departure_train_info departure_train_info
      *
      * @return $this
      */

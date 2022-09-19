@@ -209,9 +209,9 @@ class Vehicle implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->container['code'];
     }
@@ -233,9 +233,9 @@ class Vehicle implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->container['name'];
     }

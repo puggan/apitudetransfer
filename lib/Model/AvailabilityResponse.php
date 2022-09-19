@@ -209,9 +209,9 @@ class AvailabilityResponse implements ModelInterface, ArrayAccess
     /**
      * Gets search
      *
-     * @return \Swagger\Client\Model\AvailabilityRequest
+     * @return ?\Swagger\Client\Model\AvailabilityRequest
      */
-    public function getSearch(): AvailabilityRequest
+    public function getSearch(): ?AvailabilityRequest
     {
         return $this->container['search'];
     }
@@ -233,9 +233,9 @@ class AvailabilityResponse implements ModelInterface, ArrayAccess
     /**
      * Gets services
      *
-     * @return \Swagger\Client\Model\TransferServiceAvail[]
+     * @return ?\Swagger\Client\Model\TransferServiceAvail[]
      */
-    public function getServices(): array
+    public function getServices(): ?array
     {
         return $this->container['services'];
     }

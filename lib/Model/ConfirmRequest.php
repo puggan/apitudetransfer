@@ -233,9 +233,9 @@ class ConfirmRequest implements ModelInterface, ArrayAccess
     /**
      * Gets client_reference
      *
-     * @return string
+     * @return ?string
      */
-    public function getClientReference(): string
+    public function getClientReference(): ?string
     {
         return $this->container['client_reference'];
     }
@@ -257,9 +257,9 @@ class ConfirmRequest implements ModelInterface, ArrayAccess
     /**
      * Gets holder
      *
-     * @return \Swagger\Client\Model\Pax
+     * @return ?\Swagger\Client\Model\Pax
      */
-    public function getHolder(): Pax
+    public function getHolder(): ?Pax
     {
         return $this->container['holder'];
     }
@@ -281,9 +281,9 @@ class ConfirmRequest implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return string
+     * @return ?string
      */
-    public function getLanguage(): string
+    public function getLanguage(): ?string
     {
         return $this->container['language'];
     }
@@ -305,9 +305,9 @@ class ConfirmRequest implements ModelInterface, ArrayAccess
     /**
      * Gets remark
      *
-     * @return string
+     * @return ?string
      */
-    public function getRemark(): string
+    public function getRemark(): ?string
     {
         return $this->container['remark'];
     }
@@ -329,9 +329,9 @@ class ConfirmRequest implements ModelInterface, ArrayAccess
     /**
      * Gets transfers
      *
-     * @return \Swagger\Client\Model\TransferConfirm[]
+     * @return ?\Swagger\Client\Model\TransferConfirm[]
      */
-    public function getTransfers(): array
+    public function getTransfers(): ?array
     {
         return $this->container['transfers'];
     }

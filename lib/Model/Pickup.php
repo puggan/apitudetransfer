@@ -266,9 +266,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return string
+     * @return ?string
      */
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->container['address'];
     }
@@ -290,9 +290,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets altitude
      *
-     * @return double
+     * @return ?double
      */
-    public function getAltitude(): float
+    public function getAltitude(): ?float
     {
         return $this->container['altitude'];
     }
@@ -314,9 +314,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets check_pickup
      *
-     * @return \Swagger\Client\Model\CheckPickup
+     * @return ?\Swagger\Client\Model\CheckPickup
      */
-    public function getCheckPickup(): CheckPickup
+    public function getCheckPickup(): ?CheckPickup
     {
         return $this->container['check_pickup'];
     }
@@ -338,9 +338,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->container['description'];
     }
@@ -362,9 +362,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets image
      *
-     * @return string
+     * @return ?string
      */
-    public function getImage(): string
+    public function getImage(): ?string
     {
         return $this->container['image'];
     }
@@ -386,9 +386,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets latitude
      *
-     * @return double
+     * @return ?double
      */
-    public function getLatitude(): float
+    public function getLatitude(): ?float
     {
         return $this->container['latitude'];
     }
@@ -410,9 +410,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets longitude
      *
-     * @return double
+     * @return ?double
      */
-    public function getLongitude(): float
+    public function getLongitude(): ?float
     {
         return $this->container['longitude'];
     }
@@ -434,9 +434,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets number
      *
-     * @return string
+     * @return ?string
      */
-    public function getNumber(): string
+    public function getNumber(): ?string
     {
         return $this->container['number'];
     }
@@ -458,9 +458,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets pickup_id
      *
-     * @return int
+     * @return ?int
      */
-    public function getPickupId(): int
+    public function getPickupId(): ?int
     {
         return $this->container['pickup_id'];
     }
@@ -482,9 +482,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets stop_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getStopName(): string
+    public function getStopName(): ?string
     {
         return $this->container['stop_name'];
     }
@@ -506,9 +506,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets town
      *
-     * @return string
+     * @return ?string
      */
-    public function getTown(): string
+    public function getTown(): ?string
     {
         return $this->container['town'];
     }
@@ -530,9 +530,9 @@ class Pickup implements ModelInterface, ArrayAccess
     /**
      * Gets zip
      *
-     * @return string
+     * @return ?string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->container['zip'];
     }

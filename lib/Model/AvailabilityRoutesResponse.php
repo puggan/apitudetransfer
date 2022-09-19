@@ -209,9 +209,9 @@ class AvailabilityRoutesResponse implements ModelInterface, ArrayAccess
     /**
      * Gets routes
      *
-     * @return \Swagger\Client\Model\Route[]
+     * @return ?\Swagger\Client\Model\Route[]
      */
-    public function getRoutes(): array
+    public function getRoutes(): ?array
     {
         return $this->container['routes'];
     }

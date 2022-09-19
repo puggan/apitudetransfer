@@ -221,9 +221,9 @@ class Price implements ModelInterface, ArrayAccess
     /**
      * Gets currency_id
      *
-     * @return string
+     * @return ?string
      */
-    public function getCurrencyId(): string
+    public function getCurrencyId(): ?string
     {
         return $this->container['currency_id'];
     }
@@ -245,9 +245,9 @@ class Price implements ModelInterface, ArrayAccess
     /**
      * Gets net_amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getNetAmount(): float
+    public function getNetAmount(): ?float
     {
         return $this->container['net_amount'];
     }
@@ -269,9 +269,9 @@ class Price implements ModelInterface, ArrayAccess
     /**
      * Gets total_amount
      *
-     * @return float
+     * @return ?float
      */
-    public function getTotalAmount(): float
+    public function getTotalAmount(): ?float
     {
         return $this->container['total_amount'];
     }

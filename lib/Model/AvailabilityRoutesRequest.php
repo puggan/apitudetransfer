@@ -248,9 +248,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return string
+     * @return ?string
      */
-    public function getCategory(): string
+    public function getCategory(): ?string
     {
         return $this->container['category'];
     }
@@ -272,9 +272,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return string
+     * @return ?string
      */
-    public function getLanguage(): string
+    public function getLanguage(): ?string
     {
         return $this->container['language'];
     }
@@ -296,9 +296,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets occupancy
      *
-     * @return \Swagger\Client\Model\Occupancy
+     * @return ?\Swagger\Client\Model\Occupancy
      */
-    public function getOccupancy(): Occupancy
+    public function getOccupancy(): ?Occupancy
     {
         return $this->container['occupancy'];
     }
@@ -320,9 +320,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets routes
      *
-     * @return \Swagger\Client\Model\RouteRequestDTO[]
+     * @return ?\Swagger\Client\Model\RouteRequestDTO[]
      */
-    public function getRoutes(): array
+    public function getRoutes(): ?array
     {
         return $this->container['routes'];
     }
@@ -344,9 +344,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }
@@ -368,9 +368,9 @@ class AvailabilityRoutesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets vehicle
      *
-     * @return string
+     * @return ?string
      */
-    public function getVehicle(): string
+    public function getVehicle(): ?string
     {
         return $this->container['vehicle'];
     }

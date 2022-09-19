@@ -212,9 +212,9 @@ class CheckPickup implements ModelInterface, ArrayAccess
     /**
      * Gets hours_before_consulting
      *
-     * @return int
+     * @return ?int
      */
-    public function getHoursBeforeConsulting(): int
+    public function getHoursBeforeConsulting(): ?int
     {
         return $this->container['hours_before_consulting'];
     }
@@ -236,9 +236,9 @@ class CheckPickup implements ModelInterface, ArrayAccess
     /**
      * Gets must_check_pickup_time
      *
-     * @return bool
+     * @return ?bool
      */
-    public function getMustCheckPickupTime(): bool
+    public function getMustCheckPickupTime(): ?bool
     {
         return $this->container['must_check_pickup_time'];
     }
@@ -260,9 +260,9 @@ class CheckPickup implements ModelInterface, ArrayAccess
     /**
      * Gets url
      *
-     * @return string
+     * @return ?string
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->container['url'];
     }

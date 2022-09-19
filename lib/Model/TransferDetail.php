@@ -177,9 +177,9 @@ const TYPE_TRAIN = 'TRAIN';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getDirectionAllowableValues(): array
+    public function getDirectionAllowableValues(): ?array
     {
         return [
             self::DIRECTION_ARRIVAL,
@@ -188,9 +188,9 @@ self::DIRECTION_DEPARTURE,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_FLIGHT,
@@ -262,9 +262,9 @@ self::TYPE_TRAIN,        ];
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->container['code'];
     }
@@ -286,9 +286,9 @@ self::TYPE_TRAIN,        ];
     /**
      * Gets company_name
      *
-     * @return string
+     * @return ?string
      */
-    public function getCompanyName(): string
+    public function getCompanyName(): ?string
     {
         return $this->container['company_name'];
     }
@@ -310,9 +310,9 @@ self::TYPE_TRAIN,        ];
     /**
      * Gets direction
      *
-     * @return string
+     * @return ?string
      */
-    public function getDirection(): string
+    public function getDirection(): ?string
     {
         return $this->container['direction'];
     }
@@ -343,9 +343,9 @@ self::TYPE_TRAIN,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }

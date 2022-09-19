@@ -236,9 +236,9 @@ class PickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets date
      *
-     * @return string
+     * @return ?string
      */
-    public function getDate(): string
+    public function getDate(): ?string
     {
         return $this->container['date'];
     }
@@ -260,9 +260,9 @@ class PickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets from
      *
-     * @return \Swagger\Client\Model\TransferPoint
+     * @return ?\Swagger\Client\Model\TransferPoint
      */
-    public function getFrom(): TransferPoint
+    public function getFrom(): ?TransferPoint
     {
         return $this->container['from'];
     }
@@ -284,9 +284,9 @@ class PickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets pickup
      *
-     * @return \Swagger\Client\Model\Pickup
+     * @return ?\Swagger\Client\Model\Pickup
      */
-    public function getPickup(): Pickup
+    public function getPickup(): ?Pickup
     {
         return $this->container['pickup'];
     }
@@ -308,9 +308,9 @@ class PickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets time
      *
-     * @return string
+     * @return ?string
      */
-    public function getTime(): string
+    public function getTime(): ?string
     {
         return $this->container['time'];
     }
@@ -332,9 +332,9 @@ class PickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets to
      *
-     * @return \Swagger\Client\Model\TransferPoint
+     * @return ?\Swagger\Client\Model\TransferPoint
      */
-    public function getTo(): TransferPoint
+    public function getTo(): ?TransferPoint
     {
         return $this->container['to'];
     }

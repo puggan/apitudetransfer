@@ -170,9 +170,9 @@ const TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL = 'SUPPLIER_MAX_WAITING_TIME_
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_CUSTOMER_MAX_WAITING_TIME,
@@ -244,9 +244,9 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
     /**
      * Gets metric
      *
-     * @return string
+     * @return ?string
      */
-    public function getMetric(): string
+    public function getMetric(): ?string
     {
         return $this->container['metric'];
     }
@@ -268,9 +268,9 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }
@@ -301,9 +301,9 @@ self::TYPE_SUPPLIER_MAX_WAITING_TIME_INTERNATIONAL,        ];
     /**
      * Gets value
      *
-     * @return int
+     * @return ?int
      */
-    public function getValue(): int
+    public function getValue(): ?int
     {
         return $this->container['value'];
     }

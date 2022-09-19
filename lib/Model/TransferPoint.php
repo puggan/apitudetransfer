@@ -173,9 +173,9 @@ const TYPE_GPS = 'GPS';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_GIATA,
@@ -247,9 +247,9 @@ self::TYPE_GPS,        ];
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->container['code'];
     }
@@ -271,9 +271,9 @@ self::TYPE_GPS,        ];
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->container['description'];
     }
@@ -295,9 +295,9 @@ self::TYPE_GPS,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }

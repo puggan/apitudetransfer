@@ -242,9 +242,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets date
      *
-     * @return string
+     * @return ?string
      */
-    public function getDate(): string
+    public function getDate(): ?string
     {
         return $this->container['date'];
     }
@@ -266,9 +266,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets error
      *
-     * @return \Swagger\Client\Model\Error
+     * @return ?\Swagger\Client\Model\Error
      */
-    public function getError(): Error
+    public function getError(): ?Error
     {
         return $this->container['error'];
     }
@@ -290,9 +290,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->container['id'];
     }
@@ -314,9 +314,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets services
      *
-     * @return \Swagger\Client\Model\TransferServiceAvail[]
+     * @return ?\Swagger\Client\Model\TransferServiceAvail[]
      */
-    public function getServices(): array
+    public function getServices(): ?array
     {
         return $this->container['services'];
     }
@@ -338,9 +338,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets time
      *
-     * @return string
+     * @return ?string
      */
-    public function getTime(): string
+    public function getTime(): ?string
     {
         return $this->container['time'];
     }
@@ -362,9 +362,9 @@ class Route implements ModelInterface, ArrayAccess
     /**
      * Gets unfiltered_total_count
      *
-     * @return int
+     * @return ?int
      */
-    public function getUnfilteredTotalCount(): int
+    public function getUnfilteredTotalCount(): ?int
     {
         return $this->container['unfiltered_total_count'];
     }

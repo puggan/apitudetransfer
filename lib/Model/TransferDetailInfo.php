@@ -174,9 +174,9 @@ const TYPE_GENERIC_GUIDELINES = 'GENERIC_GUIDELINES';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_GENERAL_INFO,
@@ -251,9 +251,9 @@ self::TYPE_GENERIC_GUIDELINES,        ];
     /**
      * Gets description
      *
-     * @return string
+     * @return ?string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->container['description'];
     }
@@ -275,9 +275,9 @@ self::TYPE_GENERIC_GUIDELINES,        ];
     /**
      * Gets id
      *
-     * @return string
+     * @return ?string
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->container['id'];
     }
@@ -299,9 +299,9 @@ self::TYPE_GENERIC_GUIDELINES,        ];
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->container['name'];
     }
@@ -323,9 +323,9 @@ self::TYPE_GENERIC_GUIDELINES,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }

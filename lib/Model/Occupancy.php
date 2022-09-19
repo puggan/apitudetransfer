@@ -221,9 +221,9 @@ class Occupancy implements ModelInterface, ArrayAccess
     /**
      * Gets adults
      *
-     * @return int
+     * @return ?int
      */
-    public function getAdults(): int
+    public function getAdults(): ?int
     {
         return $this->container['adults'];
     }
@@ -245,9 +245,9 @@ class Occupancy implements ModelInterface, ArrayAccess
     /**
      * Gets children
      *
-     * @return int
+     * @return ?int
      */
-    public function getChildren(): int
+    public function getChildren(): ?int
     {
         return $this->container['children'];
     }
@@ -269,9 +269,9 @@ class Occupancy implements ModelInterface, ArrayAccess
     /**
      * Gets infants
      *
-     * @return int
+     * @return ?int
      */
-    public function getInfants(): int
+    public function getInfants(): ?int
     {
         return $this->container['infants'];
     }

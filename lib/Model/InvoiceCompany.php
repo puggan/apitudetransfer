@@ -212,9 +212,9 @@ class InvoiceCompany implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->container['name'];
     }
@@ -236,9 +236,9 @@ class InvoiceCompany implements ModelInterface, ArrayAccess
     /**
      * Gets vat_number
      *
-     * @return string
+     * @return ?string
      */
-    public function getVatNumber(): string
+    public function getVatNumber(): ?string
     {
         return $this->container['vat_number'];
     }

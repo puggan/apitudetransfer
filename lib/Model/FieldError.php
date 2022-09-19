@@ -212,9 +212,9 @@ class FieldError implements ModelInterface, ArrayAccess
     /**
      * Gets code
      *
-     * @return string
+     * @return ?string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->container['code'];
     }
@@ -236,9 +236,9 @@ class FieldError implements ModelInterface, ArrayAccess
     /**
      * Gets field
      *
-     * @return string
+     * @return ?string
      */
-    public function getField(): string
+    public function getField(): ?string
     {
         return $this->container['field'];
     }
@@ -260,9 +260,9 @@ class FieldError implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return string
+     * @return ?string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->container['message'];
     }

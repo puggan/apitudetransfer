@@ -224,9 +224,9 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return string
+     * @return ?string
      */
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->container['address'];
     }
@@ -248,9 +248,9 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return string
+     * @return ?string
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->container['country'];
     }
@@ -272,9 +272,9 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string
+     * @return ?string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->container['name'];
     }
@@ -296,9 +296,9 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets town
      *
-     * @return string
+     * @return ?string
      */
-    public function getTown(): string
+    public function getTown(): ?string
     {
         return $this->container['town'];
     }
@@ -320,9 +320,9 @@ class ConfirmPickupInformation implements ModelInterface, ArrayAccess
     /**
      * Gets zip
      *
-     * @return string
+     * @return ?string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->container['zip'];
     }

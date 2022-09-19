@@ -206,9 +206,9 @@ class ModificationsPolicies implements ModelInterface, ArrayAccess
     /**
      * Gets cancellation
      *
-     * @return bool
+     * @return ?bool
      */
-    public function getCancellation(): bool
+    public function getCancellation(): ?bool
     {
         return $this->container['cancellation'];
     }
@@ -230,9 +230,9 @@ class ModificationsPolicies implements ModelInterface, ArrayAccess
     /**
      * Gets modification
      *
-     * @return bool
+     * @return ?bool
      */
-    public function getModification(): bool
+    public function getModification(): ?bool
     {
         return $this->container['modification'];
     }

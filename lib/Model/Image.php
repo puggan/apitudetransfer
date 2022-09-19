@@ -166,9 +166,9 @@ const TYPE_EXTRALARGE = 'EXTRALARGE';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return ?string[]
      */
-    public function getTypeAllowableValues(): array
+    public function getTypeAllowableValues(): ?array
     {
         return [
             self::TYPE_SMALL,
@@ -237,9 +237,9 @@ self::TYPE_EXTRALARGE,        ];
     /**
      * Gets type
      *
-     * @return string
+     * @return ?string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->container['type'];
     }
@@ -270,9 +270,9 @@ self::TYPE_EXTRALARGE,        ];
     /**
      * Gets url
      *
-     * @return string
+     * @return ?string
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->container['url'];
     }
