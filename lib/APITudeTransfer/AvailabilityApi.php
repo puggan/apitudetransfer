@@ -103,9 +103,9 @@ class AvailabilityApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvailabilityResponse
+     * @return ?\Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): \Swagger\Client\Model\AvailabilityResponse
+    public function availability($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants): ?\Swagger\Client\Model\AvailabilityResponse
     {
         [$response] = $this->availabilityWithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $adults, $children, $infants);
         return $response;
@@ -547,9 +547,9 @@ class AvailabilityApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvailabilityResponse
+     * @return ?\Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): \Swagger\Client\Model\AvailabilityResponse
+    public function availability1($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants): ?\Swagger\Client\Model\AvailabilityResponse
     {
         [$response] = $this->availability1WithHttpInfo($language, $from_type, $from_code, $to_type, $to_code, $outbound, $inbound, $adults, $children, $infants);
         return $response;
@@ -1008,9 +1008,9 @@ class AvailabilityApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AvailabilityResponse
+     * @return ?\Swagger\Client\Model\AvailabilityResponse
      */
-    public function availability2($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): \Swagger\Client\Model\AvailabilityResponse
+    public function availability2($body, $language, $adults, $children, $infants, $vehicle = null, $type = null, $category = null, $allow_partial_results = 'true'): ?\Swagger\Client\Model\AvailabilityResponse
     {
         [$response] = $this->availability2WithHttpInfo($body, $language, $adults, $children, $infants, $vehicle, $type, $category, $allow_partial_results);
         return $response;
