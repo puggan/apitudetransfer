@@ -219,7 +219,7 @@ class TransferServiceAvail implements ModelInterface, ArrayAccess
     }
 
     const DIRECTION_DEPARTURE = 'DEPARTURE';
-const DIRECTION__RETURN = 'RETURN';
+const DIRECTION__ARRIVAL = 'ARRIVAL';
 const TRANSFER_TYPE__PRIVATE = 'PRIVATE';
 const TRANSFER_TYPE_SHARED = 'SHARED';
 
@@ -232,7 +232,7 @@ const TRANSFER_TYPE_SHARED = 'SHARED';
     {
         return [
             self::DIRECTION_DEPARTURE,
-self::DIRECTION__RETURN,        ];
+self::DIRECTION__ARRIVAL,        ];
     }
     /**
      * Gets allowable values of the enum
